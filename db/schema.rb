@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_02_28_145238) do
 
   # These are extensions that must be enabled in order to support this database
@@ -22,6 +23,29 @@ ActiveRecord::Schema.define(version: 2022_02_28_145238) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["liked_id"], name: "index_favourites_on_liked_id"
     t.index ["liker_id"], name: "index_favourites_on_liker_id"
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "chatrooms_users", force: :cascade do |t|
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_chatrooms_users_on_chatroom_id"
+    t.index ["user_id"], name: "index_chatrooms_users_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,4 +62,8 @@ ActiveRecord::Schema.define(version: 2022_02_28_145238) do
 
   add_foreign_key "favourites", "users", column: "liked_id"
   add_foreign_key "favourites", "users", column: "liker_id"
+  add_foreign_key "chatrooms_users", "chatrooms"
+  add_foreign_key "chatrooms_users", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
 end
