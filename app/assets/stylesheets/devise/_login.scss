@@ -1,20 +1,32 @@
-.login {
-  text-align: center;
-  color: rgb(255, 35, 244);
-  font-size: 40px;
-  padding-bottom: 30px;
+* {
+  overscroll-behavior: none;
 }
 
-.login-container {
-  background-image: linear-gradient(rgb(0, 2, 110), rgb(178, 48, 253));
-  display: flex;
+.login-text {
+ text-align: center;
+ color: rgb(255, 35, 244);
+ font-size: 70px;
+ padding-bottom: 30px;
+ padding-top: 210px;
+ text-shadow: 2px 1px 1px white;
+}
+
+.login {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(97, 0, 161, 0.5)), to(rgba(0, 12, 117, 0.5))), url(https://images.unsplash.com/photo-1484876065684-b683cf17d276?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGl2ZSUyMG11c2ljfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60);
+  // display: flex;
   flex-direction: column;
   align-items: center;
-  height: 778px;
+  height: 100vh;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-inputs {
   color: rgb(255, 35, 244);
+  width: 90%;
+  margin: auto;
   input {
     border-radius: 50px;
   }
@@ -28,8 +40,9 @@
   text-align: center;
   border: 1px solid rgb(255, 35, 244);
   background-color: rgb(255, 35, 244);
-  width: 80%;
+  width: 60%;
   border-radius: 50px;
+  margin-left: 76px
 }
 
 input.btn {
