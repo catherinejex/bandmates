@@ -1,0 +1,12 @@
+@import "_post.scss";
+@import "new.scss";
+
+.all-content {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, rgb(3, 3, 109), rgb(107, 20, 107))
+}
+
+.post-container {
+  margin: 0 auto;
+}
