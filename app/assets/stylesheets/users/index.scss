@@ -15,11 +15,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   max-height: 470px;
   border-radius: 5px;
-
-  &:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-  }
 }
 
 .card-image {
@@ -38,6 +33,9 @@
   margin-bottom: 10px;
 }
 
+body {
+  margin: 0;
+}
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
