@@ -1,9 +1,23 @@
+.container-nav {
+  padding: 0;
+}
+
 .nav-content-container {
   width: 100vw;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 2px rgb(3, 3, 156);
+  background: linear-gradient(to right, rgb(164, 67, 255), rgb(0, 27, 180));
+  color: white;
 }
 .navbar-right {
   display: flex;
+}
+
+.navbar {
+  padding: 0;
+}
+
+a.dropdown-item {
+  color: white;
 }

@@ -1,4 +1,18 @@
-<div class="container">
+<div class="container-nav">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <div class="nav-content-container">
+      <div class='navbar-left'>
+        <h1>BandMates</h1>
+      </div>
+      <div class="navbar-right">
+        <%= link_to "", "#", class: "dropdown-item" %>
+        <%= link_to "Another action", "#", class: "dropdown-item" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      </div>
+    </div>
+  </div>
+
+
 <h1 class= "head-text">My feed</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 </div>
