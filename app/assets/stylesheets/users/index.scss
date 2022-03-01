@@ -12,9 +12,10 @@
   display: flex;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   max-height: 470px;
   border-radius: 5px;
+  height: 220px;
 }
 
 .card-image {
@@ -35,6 +36,10 @@
 
 body {
   margin: 0;
+}
+
+.card-body {
+  width: 50%;
 }
 
 // Smallest device
