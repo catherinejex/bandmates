@@ -4,7 +4,7 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap/scss/bootstrap";
+// @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -13,3 +13,6 @@
 @import "pages/index";
 @import "users/index";
 @import "users/show";
+
+@import "posts/index";
+@import "components/navbar";

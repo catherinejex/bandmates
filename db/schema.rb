@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_03_01_125620) do
 
   # These are extensions that must be enabled in order to support this database
@@ -48,6 +49,15 @@ ActiveRecord::Schema.define(version: 2022_03_01_125620) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.text "description"
+    t.bigint "user_id", null: false
+    t.text "user_full_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -71,4 +81,5 @@ ActiveRecord::Schema.define(version: 2022_03_01_125620) do
   add_foreign_key "favourites", "users", column: "liker_id"
   add_foreign_key "messages", "chatrooms"
   add_foreign_key "messages", "users"
+  add_foreign_key "posts", "users"
 end
