@@ -1,0 +1,42 @@
+.login {
+  text-align: center;
+  color: rgb(255, 35, 244);
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+
+.container {
+  background-image: linear-gradient(rgb(0, 2, 110), rgb(178, 48, 253));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 778px;
+}
+
+.form-inputs {
+  color: rgb(255, 35, 244);
+  input {
+    border-radius: 50px;
+  }
+}
+
+.form-sign-up {
+  border-radius: 15px;
+}
+
+.form-actions {
+  text-align: center;
+  border: 1px solid rgb(255, 35, 244);
+  background-color: rgb(255, 35, 244);
+  width: 67%;
+  margin-left: 56px;
+  border-radius: 7px;
+}
+
+input.btn {
+  color: white;
+}
+
+.forgot, .sign-up {
+  color:rgb(255, 35, 244);
+}
