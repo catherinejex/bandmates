@@ -1,36 +1,52 @@
 @import "_post.scss";
 @import "new.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 .all-content {
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.posts-container {
-  margin: 0 auto;
-  height: 100%;
-  width: 75%;
+  width: 100vw;
+  font-family: 'Poppins';
   overflow-y: scroll;
 }
+
 .post {
-  width: 100%;
-  height: 50%;
-  margin-bottom: 20px;
+  margin: 0 auto;
+  width: 75%;
+  height: 55%;
+  margin-bottom: 15px;
   h1 {
     margin-bottom: 0;
+    color: linear-gradient(to right, rgb(14, 7, 122), rgb(195, 6, 233));
   }
 }
 .inner-post {
-  background-color: rgb(0, 3, 165);
-  height: 100%;
+  background: linear-gradient(to right, rgb(14, 7, 122), rgb(158, 67, 233));
   color: white;
+  // background-color: rgb(202, 202, 202);
+  // color: black;
+  height: 90%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .inner-post-bottom {
-  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+  padding-top: 20px;
   padding-right: 30px;
   padding-left: 30px;
+  padding-bottom: 20px;
   p {
     font-size: 30px;
   }
+  img {
+    height: 5px;
+    width: 5px;
+  }
+}
+.post-info {
+  display: flex;
+  justify-content: space-between;
 }
 .inner-post img {
   width: 100%;
