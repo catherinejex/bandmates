@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :posts
   has_many :received_likes, class_name: 'Favourite', foreign_key: 'liked_id'
   has_many :given_likes, class_name: 'Favourite', foreign_key: 'liker_id'
-  has_many_attached :photo
+  has_one_attached :photo
 end
