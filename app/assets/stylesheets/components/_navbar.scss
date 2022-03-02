@@ -8,9 +8,12 @@
   justify-content: space-between;
   background: linear-gradient(to right, rgb(164, 67, 255), rgb(0, 27, 180));
   color: white;
+  align-items: center;
+  height: 50px;
 }
 .navbar-right {
   display: flex;
+  font-size: 14px;
 }
 
 .navbar {
@@ -19,4 +22,10 @@
 
 a.dropdown-item {
   color: white;
+  padding: 4px 6px;
+}
+
+.band-logo{
+  margin: 0;
+  padding: 4px;
 }

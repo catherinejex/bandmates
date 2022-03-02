@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    query = User.all
+    query = query.where("location ILIKE ?", "%#{params[:location]}%") if params[:location].present?
+    query = query.where("genres ILIKE ?", "%#{params[:genres]}%") if params[:genres].present?
+    query = query.where("instruments ILIKE ?", "%#{params[:instruments]}%") if params[:instruments].present?
+    @users = query
   end
 
   def show
