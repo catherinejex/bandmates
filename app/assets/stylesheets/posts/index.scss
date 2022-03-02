@@ -22,8 +22,6 @@
 .inner-post {
   background: linear-gradient(to right, rgb(14, 7, 122), rgb(158, 67, 233));
   color: white;
-  // background-color: rgb(202, 202, 202);
-  // color: black;
   height: 90%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -35,20 +33,14 @@
   padding-top: 20px;
   padding-right: 30px;
   padding-left: 30px;
-  padding-bottom: 20px;
-  p {
-    font-size: 30px;
-  }
-  img {
-    height: 5px;
-    width: 5px;
-  }
+  padding-bottom: 10px;
 }
 .post-info {
   display: flex;
   justify-content: space-between;
 }
-.inner-post img {
+
+.image {
   width: 100%;
   height: 50%;
   object-fit: cover;
