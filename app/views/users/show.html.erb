@@ -1,3 +1,5 @@
+<%= render 'shared/navbar' %>
+
 <div class="banner-show">
   <% if @user.photo.attached?  %>
     <%= cl_image_tag @user.photo.key %>
@@ -11,8 +13,8 @@
   <div class="user-info">
     <h2>Name: <%= @user.username %></h2>
     <p>Location: <%= @user.location %></p>
-    <p>Instrument: <%= @user.instruments %></p>
-    <p>Genre: <%= @user.genres %></p>
+    <p>Instrument: <%= @user.instruments.join(', ') %></p>
+    <p>Genre: <%= @user.genres.join(', ') %></p>
     <p>Bio: <%= @user.bio %></p>
     <br>
     <div class="d-flex justify-content-center">
