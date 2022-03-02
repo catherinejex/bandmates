@@ -6,10 +6,10 @@
       </div>
       <div class="card-body">
         <div class="card-info">
-          <h2>Name<%= user.username %></h2>
-          <p>Location<%= user.location %></p>
-          <p>Instrument<%= user.instruments %></p>
-          <p>Genre<%= user.genres %></p>
+          <h4><%= user.username %></h4>
+          <p><%= user.location %></p>
+          <p><%= user.instruments %></p>
+          <p><%= user.genres %></p>
           <p><%= link_to 'See more', user_path(user), style:'text-decoration:none' %></p>
           <div class="music-note"><i class="fa fa-music"></i></div>
         </div>

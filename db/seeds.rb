@@ -3,6 +3,7 @@ require 'open-uri'
 Post.delete_all
 User.delete_all
 
+
 user1 = User.create!(email: "1@hello.com", password: "123456", username: "drummerboy21", bio: "hey guys, i play the drums.", location: "Stoke Newington", instruments: "drums", genres: "funk" )
 user1.photo.attach(io: File.open('app/assets/images/drummer.jpg'), filename: 'drummer.jpg', content_type: 'image/jpg')
 
@@ -25,3 +26,4 @@ post.photo.attach(io: File.open('app/assets/images/srv.jpeg'), filename: 'srv.jp
 
 Post.create!(description: "I'm now offering violin lessons for $20 an hour!", user: user2)
 post.photo.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'violin.jpeg', content_type: 'image/jpg')
+

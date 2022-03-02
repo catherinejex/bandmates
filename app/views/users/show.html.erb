@@ -1,13 +1,22 @@
 <div class="banner-show">
-  <img src="https://images.unsplash.com/photo-1499424017184-418f6808abf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+  <% if @user.photo.attached?  %>
+    <%= cl_image_tag @user.photo.key %>
+  <% else %>
+    <img src="https://images.unsplash.com/photo-1499424017184-418f6808abf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+  <% end %>
+
 </div>
 
 <div class="container mt-3 mb-3">
   <div class="user-info">
-    <h2>Name<%= @user.username %></h2>
-    <p>Location<%= @user.location %></p>
-    <p>Instrument<%= @user.instruments %></p>
-    <p>Genre<%= @user.genres %></p>
-    <p>Bio<%= @user.bio %></p>
+    <h2>Name: <%= @user.username %></h2>
+    <p>Location: <%= @user.location %></p>
+    <p>Instrument: <%= @user.instruments %></p>
+    <p>Genre: <%= @user.genres %></p>
+    <p>Bio: <%= @user.bio %></p>
+    <br>
+    <div class="d-flex justify-content-center">
+     <button class='btn btn-primary btn-sendmessage'>Send a message</button>
+    </div>
   </div>
 </div>
