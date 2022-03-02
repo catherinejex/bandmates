@@ -4,6 +4,7 @@
 
 .login-text {
  text-align: center;
+ font-family: 'Lobster', cursive;
  color: rgb(255, 35, 244);
  font-size: 70px;
  padding-bottom: 30px;
@@ -13,13 +14,11 @@
 
 .login {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(97, 0, 161, 0.5)), to(rgba(0, 12, 117, 0.5))), url(https://images.unsplash.com/photo-1484876065684-b683cf17d276?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGl2ZSUyMG11c2ljfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60);
-  // display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
   object-fit: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
