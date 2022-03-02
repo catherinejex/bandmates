@@ -1,11 +1,16 @@
-<% minutes = (Time.now.to_s.split(' ')[1].split(':')[1].to_i) - (post.created_at.to_s.split(' ')[1].split(':')[1].to_i)
-                  hours = (Time.now.to_s.split(' ')[0].split(':')[0].to_i) - (post.created_at.to_s.split(' ')[0].split(':')[0].to_i)
-                  if hours > 1
-                    <p><%= minutes %> minutes ago</p>
-                  else
-                    <p><%= hours %> hours ago</p>
-                  end %>
-          </div>
+# <% minutes = (Time.now.to_s.split(' ')[1].split(':')[1].to_i) - (post.created_at.to_s.split(' ')[1].split(':')[1].to_i)
+#                   hours = (Time.now.to_s.split(' ')[0].split(':')[0].to_i) - (post.created_at.to_s.split(' ')[0].split(':')[0].to_i)
+#                   if hours > 1
+#                     <p><%= minutes %> minutes ago</p>
+#                   else
+#                     <p><%= hours %> hours ago</p>
+#                   end %>
+#           </div>
 
-          ((Time.now.to_s.split(' ')[1].split(':')[1].to_i)
-            (post.created_at.to_s.split(' ')[1].split(':')[1].to_i))
+#           ((Time.now.to_s.split(' ')[1].split(':')[1].to_i)
+#             (post.created_at.to_s.split(' ')[1].split(':')[1].to_i))
+
+
+require 'date'
+
+posted, current =

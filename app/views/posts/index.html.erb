@@ -6,14 +6,10 @@
       <div class='inner-post'>
       <img class='image' src='<%= cl_image_path post.photo.key %>'>
         <div class='inner-post-bottom'>
-          <p><%= post.description %></p>
-          <i class="fa-solid fa-location-dot"></i>
-          <p><%= post.location %>
+        <p><%= post.description %></p>
+          <p><%= post.location %><p>
           <div class='post-info'>
-            <p><%=
-            (Time.now.to_s.split(' ')[1].split(':')[1].to_i) -
-            (post.created_at.to_s.split(' ')[1].split(':')[1].to_i)
-            %> minutes ago</p>
+            <p><%= time_ago_in_words(post.created_at)%> ago</p>
           </div>
         </div>
       </div>

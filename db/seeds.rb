@@ -21,8 +21,8 @@ user5.photo.attach(io: File.open('app/assets/images/21-Savage.jpg'), filename: '
 
 users = [user1, user2, user3, user4, user5]
 
-post1 = Post.create!(description: "Had a great time playing at CBGB's tonight! Off to Philadelphia next.", user: user1)
+post1 = Post.create!(description: "Had a great time playing at CBGB's tonight! Off to Philadelphia next.", location: 'East Village, New York', user: user1)
 post1.photo.attach(io: File.open('app/assets/images/srv.jpeg'), filename: 'srv.jpeg', content_type: 'image/jpeg')
 
-post2 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", user: user2)
+post2 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user2)
 post2.photo.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'violin.jpeg', content_type: 'image/jpg')
