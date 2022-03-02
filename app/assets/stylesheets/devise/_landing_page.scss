@@ -1,0 +1,73 @@
+.landing-main {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  color: white;
+  font-size: 80px;
+  padding-top: 270px;
+}
+
+.landing-secondary {
+  background: linear-gradient(to right, rgb(174, 92, 255), rgb(0, 27, 180));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 80px;
+  bottom: 101px;
+  left: 1px;
+}
+
+ .landing {
+   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(97, 0, 161, 0.5)), to(rgba(0, 12, 117, 0.5))), url(https://images.unsplash.com/photo-1484876065684-b683cf17d276?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGl2ZSUyMG11c2ljfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60);
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
+   object-fit: cover;
+   background-position: center;
+   background-size: cover;
+ }
+
+ .landing-p {
+   color: white;
+   text-align: center;
+ }
+
+ .login-btn {
+   border-radius: 50px;
+   padding: 5px;
+   font-size: 25px;
+   width: 70%;
+   text-align: center;
+   margin-bottom: 20px;
+   background-image: linear-gradient(to right, rgb(164, 67, 255), rgb(0, 27, 180));
+   a {
+     color: white;
+     text-decoration: none;
+   }
+ }
+
+ .signup-btn {
+    border-radius: 50px;
+    padding: 5px;
+    font-size: 25px;
+    width: 70%;
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(164, 67, 255), rgb(0, 27, 180));
+    a {
+      color: white;
+      text-decoration: none;
+    }
+ }
+
+.btn-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: flex-end;
+  padding-top: 200px;
+}
+
+.heading-landing {
+  height: 373px;
+}
