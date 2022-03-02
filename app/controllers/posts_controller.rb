@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(venue_params)
+    @post = Post.new(post_params)
     @post.user = current_user
 
     if @post.save
@@ -24,5 +24,11 @@ class PostsController < ApplicationController
     @post.destroy
 
     redirect_to posts_path(@posts)
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:description, :location, :photo)
   end
 end
