@@ -21,8 +21,7 @@ user5 = User.create!(email: "5@hello.com", password: "123456", username: "21 Sav
 user5.photo.attach(io: File.open('app/assets/images/21-Savage.jpg'), filename: '21-Savage.jpg', content_type: 'image/jpg')
 
 user6 = User.create!(email: "6@hello.com", password: "123456", username: "Ben 'The Figma' McWagon", bio: "I'm a mean drummer and play the harmonica. If you are cool enough join my band ping me here. My band is 34 strong and meet every day on Kingsland road for 9 hours, all 34 memebers play the keyboards!", location: "Shoreditch", instruments: ["Drums", "Harmonica"], genres: ["Rock n Roll", "Blues", "90s Hip-hop"] )
-user5.photo.attach(io: File.open('app/assets/images/ben.png'), filename: 'ben.png', content_type: 'image/png')
-
+user6.photo.attach(io: File.open('app/assets/images/ben.png'), filename: 'ben.png', content_type: 'image/png')
 
 users = [user1, user2, user3, user4, user5]
 
