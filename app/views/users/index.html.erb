@@ -29,7 +29,16 @@
             <p><%= user.location %></p>
             <p><%= user.instruments.join(', ') %></p>
             <p><%= user.genres.join(', ') %></p>
-            <div class="music-note"><i class="fa fa-music"></i></div>
+            <% if (favourite = @favourites.find_by(liked: user)).present? %>
+              <div class="liked-note"><i class="fa fa-music"></i></div>
+            <% else %>
+              <%= link_to user_favourites_path(user), method: :post do %>
+                <div class="music-note">
+                  <i class="fa fa-music"></i>
+                </div>
+              <% end %>
+            <% end %>
+
           </div>
         </div>
       </div>
