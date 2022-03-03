@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    query = User.all
+    query = User.all.where('id != ?', current_user.id)
     query = query.where("location ILIKE ?", "%#{params[:location]}%") if params[:location].present?
     query = query.where("genres ILIKE ?", "%#{params[:genres]}%") if params[:genres].present?
     query = query.where("instruments ILIKE ?", "%#{params[:instruments]}%") if params[:instruments].present?
@@ -8,9 +8,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
+    @chatroom = Chatroom.find_by(creator: current_user, invited: @user) || Chatroom.find_by(creator: @user, invited: current_user)
   end
-
+  
+  private
+  
   def user_params
     params.require(:user).permit(:email, :username, :bio, :location, :instruments, :genres, :photo)
   end
