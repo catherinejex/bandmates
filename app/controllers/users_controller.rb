@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = User.all
+    @favourites = current_user.given_likes
   end
 
   def show
