@@ -42,3 +42,9 @@ post1.photo.attach(io: File.open('app/assets/images/srv.jpeg'), filename: 'srv.j
 
 post2 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user2)
 post2.photo.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'violin.jpeg', content_type: 'image/jpg')
+
+post3 = Post.create!(description: "Are you looking for a producer? I can fully mix and master your music, £30/hour. Inquire for details", location: 'Houston, Texas', user: user4)
+post3.photo.attach(io: File.open('app/assets/images/studio.jpg'), filename: 'studio.jpg', content_type: 'image/jpg')
+
+post4 = Post.create!(description: "Come see us play tonight at Slim Jim's! We will be opening for The Radio Dept. and we go on at 9pm!", location: "Angel, London", user: user7)
+post4.photo.attach(io: File.open('app/assets/images/slimjims.jpeg'), filename: 'slimjims.jpeg', content_type: 'image/jpeg')
