@@ -1,13 +1,15 @@
 .footer-main {
-
   display: flex;
   align-items: center;
+  // justify-content: space-between;
+  padding: 0px 50px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
   justify-content: space-evenly;
-  position: sticky;
   height: 50px;
   padding: 0px 50px;
   background: linear-gradient(to right, rgb(164, 67, 255), rgb(0, 27, 180));
-
 }
 .footer-links {
   display: flex;

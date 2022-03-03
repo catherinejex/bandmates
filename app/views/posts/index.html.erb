@@ -2,9 +2,11 @@
 <div class='all-content'>
   <% @posts.each do |post| %>
     <div class='post'>
-      <h1><%= post.user.username %></h1>
+      <h3><%= post.user.username %></h3>
       <div class='inner-post'>
-      <img class='image' src='<%= cl_image_path post.photo.key %>'>
+        <% if post.photo.attached? %>
+          <img class='image' src='<%= cl_image_path post.photo.key%>'>
+        <% end %>
         <div class='inner-post-bottom'>
         <p><%= post.description %></p>
           <p><%= post.location %><p>
@@ -15,5 +17,7 @@
       </div>
     </div>
   <% end %>
+  <br>
+  <br>
 </div>
 <%= render 'shared/footer' %>
