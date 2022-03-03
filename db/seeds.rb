@@ -1,6 +1,7 @@
 require 'open-uri'
 
-
+Message.delete_all
+Chatroom.delete_all
 Post.delete_all
 Favourite.delete_all
 User.delete_all
@@ -23,7 +24,8 @@ user5.photo.attach(io: File.open('app/assets/images/21-Savage.jpg'), filename: '
 user6 = User.create!(email: "6@hello.com", password: "123456", username: "Ben 'The Figma' McWagon", bio: "I'm a mean drummer and play the harmonica. If you are cool enough join my band ping me here. My band is 34 strong and meet every day on Kingsland road for 9 hours, all 34 memebers play the keyboards!", location: "Shoreditch", instruments: ["Drums", "Harmonica"], genres: ["Rock n Roll", "Blues", "90s Hip-hop"] )
 user6.photo.attach(io: File.open('app/assets/images/ben.png'), filename: 'ben.png', content_type: 'image/png')
 
-users = [user1, user2, user3, user4, user5]
+user7 = User.create!(email: "7@hello.com", password: "123456", username: "Raeesa Qureshi", bio: "I play the organ casually on the weekends when Im not coding or performing triple heart bypasses. I make fusion Brit-pop and soul, kinda snazzy", location: "Kent", instruments: ["Church Organ"], genres: ["Brit-pop", "Soul"] )
+user7.photo.attach(io: File.open('app/assets/images/Raeesa.jfif'), filename: 'Raeesa.jfif', content_type: 'image/jfif')
 
 
 post1 = Post.create!(description: "Had a great time playing at CBGB's tonight! Off to Philadelphia next.", location: 'East Village, New York', user: user1)
