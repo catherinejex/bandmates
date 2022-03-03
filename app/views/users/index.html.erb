@@ -30,9 +30,11 @@
             <p><%= user.instruments.join(', ') %></p>
             <p><%= user.genres.join(', ') %></p>
             <% if (favourite = @favourites.find_by(liked: user)).present? %>
+              <%= link_to favourite_path(user),remote: true, method: :delete do%>
               <div class="liked-note"><i class="fa fa-music"></i></div>
+              <%end %>
             <% else %>
-              <%= link_to user_favourites_path(user), method: :post do %>
+              <%= link_to user_favourites_path(user),remote: true, method: :post do %>
                 <div class="music-note">
                   <i class="fa fa-music"></i>
                 </div>
