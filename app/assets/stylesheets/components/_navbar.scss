@@ -19,8 +19,6 @@
 
 .navbar {
   padding: 0;
-  // position: fixed;
-  // top: 0;
 }
 
 a.dropdown-item {
@@ -40,4 +38,9 @@ a.dropdown-item {
   font-size: 20px;
   padding-left: 5px;
   padding-right: 5px;
+  transition: 0.5s;
+}
+
+.nav-icon:hover {
+  color:rgb(164, 67, 255)
 }
