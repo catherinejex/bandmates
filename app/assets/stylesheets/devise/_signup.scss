@@ -1,6 +1,3 @@
-* {
-  overflow: hidden !important;
-}
 
 abbr[title*="required"] {
   display: none !important;
@@ -20,6 +17,9 @@ abbr[title*="required"] {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+}
+.content {
+
 }
 #first {
   padding-top: 200px;
@@ -64,6 +64,20 @@ abbr[title*="required"] {
   input {
     border-radius: 50px;
   }
+}
+.form-actions-signup {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.next-button {
+  padding: 10px;
+  width: 90%;
+  text-align: center;
+  background-color: #ff23f4;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
 }
 
 // . {

@@ -18,7 +18,11 @@
     <p>Bio: <%= @user.bio %></p>
     <br>
     <div class="d-flex justify-content-center">
-     <button class='btn btn-primary btn-sendmessage'>Send a message</button>
+      <% if @chatroom.present? %>
+        <%= link_to 'Send a message', chatroom_path(@chatroom), class:'btn btn-primary btn-sendmessage'  %>
+      <% elsif @user != current_user %>
+        <%= link_to 'Send a message', user_chatrooms_path(@user), method: :post, class:'btn btn-primary btn-sendmessage'  %>
+      <% end %>
     </div>
   </div>
 </div>
