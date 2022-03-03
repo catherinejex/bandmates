@@ -27,7 +27,7 @@
         <%= link_to '', user_path(user), class:"card-image", style:"background-image: url(#{ cl_image_path user.photo.key })" %>
         <div class="card-body">
           <div class="card-info">
-            <h4><%= user.username %></h4>
+            <p style="font-size:18px; font-family: Lobster Two, cursive; font-weight:bold"><%= user.username %></p>
             <p><%= user.location %></p>
             <p><%= user.instruments.join(', ') %></p>
             <p><%= user.genres.join(', ') %></p>
@@ -42,10 +42,10 @@
                 </div>
               <% end %>
             <% end %>
-
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
+<%= render 'shared/footer' %>
