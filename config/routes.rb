@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :create, :new, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users, only: [:index, :show] do
+    resources :chatrooms, only: [:create, :index]
     resources :favourites, only: [:create]
-    resources :chatrooms, only: :create
   end
   resources :favourites, only: [:index, :destroy]
   resources :chatrooms, only: [:show, :index] do

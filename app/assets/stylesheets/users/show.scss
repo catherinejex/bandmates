@@ -4,6 +4,8 @@
   object-fit: cover;
   height: 300px;
   width: 100%;
+  margin-top: 50px;
+  position: relative;
 }
 
 .btn-sendmessage {
@@ -12,4 +14,15 @@
   border: none;
   padding: 10px 16px 10px 16px;
   font-size: 14px;
+}
+
+.back-to-index {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+}
+
+.fa.fa-arrow-left.index {
+  color: white;
+  opacity: 0.6;
 }
