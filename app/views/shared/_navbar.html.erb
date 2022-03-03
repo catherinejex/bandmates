@@ -9,10 +9,12 @@
       <h2 class='band-logo'>BandMates</h2>
     </div>
     <div class="navbar-right">
-      <%= link_to '#', class: "nav-icon" do %>
+
+      <%= link_to favourites_path, class: "nav-icon" do %>
+
         <i class="fa fa-solid fa-music"></i>
       <% end %>
-      <%= link_to '#', class: "nav-icon" do %>
+      <%= link_to 'chatrooms', class: "nav-icon" do %>
         <i class="fa fa-solid fa-envelope"></i>
       <% end %>
       <%= link_to '#', class: "nav-icon" do %>

@@ -1,0 +1,24 @@
+<h1 style="text-align: center;">Your favourited users</h1>
+<div class="container">
+  <div class='cards'>
+    <% @favourites.each do |user| %>
+    <div class="card-user">
+      <%= link_to '', user_path(user.liked), class:"card-image", style:"background-image: url(#{ cl_image_path user.liked.photo.key }"%>
+      <div class="card-body">
+        <div class="card-info">
+          <h4><%= user.liked.username %></h4>
+          <p><%= user.liked.location %></p>
+          <p><%= user.liked.instruments.join(', ') %></p>
+          <p><%= user.liked.genres.join(', ') %></p>
+          <%= link_to favourite_path(user.liked),remote: true, method: :delete do%>
+            <div class="liked-note">
+              <i class="fa fa-music"></i>
+            </div>
+          <%end %>
+
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

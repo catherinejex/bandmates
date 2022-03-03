@@ -2,32 +2,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
-
-<div class="sign-up-page">
-  <h2 class="sign-up-text">Sign up</h2>
-
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
-
-    <div class="form-inputs-signup">
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "hint",
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
+<div class='sign-up-journey'>
+  <div class='sign-up-module' id='first'>
+    <div class='content'>
+      <h2 class="sign-up-text">Sign up</h2>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+        <div class="form-inputs-signup">
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "hint",
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+        <div class="form-actions-signup">
+          <a href="#second" class='next-button'>Next</a>
+        </div>
+      <% end %>
     </div>
+  </div>
+  <div class='sign-up-module' id='second'>
+    <h1>Will this be a band profile </br>or an individual profile?</h1>
+    <a href='#third'>
+      <div class="card-category" style="background-image: linear-gradient(rgba(7,32,245,0.3), rgba(7,32,245,0.3)), url('https://images.unsplash.com/photo-1522536421511-14c9073df899?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')">
+        <h2>Individual</h2>
+      </div>
+    </a>
+    <a href='#fourth'>
+      <div class="card-category" style="background-image: linear-gradient(rgba(7,32,245,0.3), rgba(7,32,245,0.3)), url('https://images.unsplash.com/photo-1481886756534-97af88ccb438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80')">
+        <h2>Band</h2>
+      </div>
+    </a>
+  </div>
+  <div class='sign-up-module' id='third'>
+    <h1>What instruments do you</br> play?</h1>
 
-    <div class="form-actions-signup">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
-
-  <%= render "devise/shared/links" %>
-
+  </div>
 </div>
