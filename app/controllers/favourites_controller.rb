@@ -10,6 +10,8 @@ class FavouritesController < ApplicationController
   end
 
   def destroy
-
+    @favourite = Favourite.find_by(liker_id: current_user.id, liked_id: params[:id])
+    @favourite.destroy
+    redirect_to request.referrer
   end
 end
