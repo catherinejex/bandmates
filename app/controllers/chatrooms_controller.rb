@@ -10,4 +10,8 @@ class ChatroomsController < ApplicationController
 
     redirect_to chatroom_path(@chatroom)
   end
+
+  def index
+    @chatrooms = Chatroom.where(creator: current_user).or(Chatroom.where(invited: current_user))
+  end
 end

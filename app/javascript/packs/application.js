@@ -14,6 +14,5 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
-
 // import "bootstrap-icons/font/boostrap-icons.css"
 
