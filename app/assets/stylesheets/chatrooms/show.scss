@@ -1,0 +1,36 @@
+.btn-message-send {
+  margin: 4px 10px 20px 10px;
+  // background-image: linear-gradient(to right, rgb(152, 152, 233), rgb(207, 60, 207));
+  background-color: rgb(179, 54, 179);
+  border-radius: 5px;
+  border: none;
+  width: 30%;
+}
+
+.message-content {
+  background-image: linear-gradient(to right, rgb(152, 152, 233), rgb(207, 60, 207));
+  // background-color: rgb(236, 233, 233);
+  border-radius: 5px;
+  padding: 15px;
+  margin: 0px;
+  font-size: 14px;
+}
+
+.chatroom {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.img-avatar-message {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  object-fit: cover;
+  margin-right: 10px ;
+}
+
+#message_content {
+  height: 50px;
+  margin-bottom: 0px !important;
+  border-radius: 5px;
+}

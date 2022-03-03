@@ -1,12 +1,23 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="nav-content-container">
     <div class='navbar-left'>
-      <h1>BandMates</h1>
+      <h2 class='band-logo'>BandMates</h2>
     </div>
     <div class="navbar-right">
-      <%= link_to "Action", "#", class: "dropdown-item" %>
-      <%= link_to "Another action", "#", class: "dropdown-item" %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      <%= link_to '#', class: "nav-icon" do %>
+        <i class="fa fa-solid fa-music"></i>
+      <% end %>
+      <%= link_to '#', class: "nav-icon" do %>
+        <i class="fa fa-solid fa-envelope"></i>
+      <% end %>
+      <%= link_to '#', class: "nav-icon" do %>
+        <i class="fa fa-solid fa-user"></i>
+      <% end %>
     </div>
   </div>
 </div>

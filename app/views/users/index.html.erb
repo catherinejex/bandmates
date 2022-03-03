@@ -1,16 +1,34 @@
-<div class="container">
+<%= render 'shared/navbar' %>
+
+<div class="container mt-4">
+  <%= form_tag users_path, class: "filter-form", method: :get do %>
+    <%= text_field_tag :location,
+    params[:location],
+    class: "filter-input",
+    placeholder: "Location"
+    %>
+    <%= text_field_tag :genres,
+    params[:genres],
+    class: "filter-input",
+    placeholder: "Genre"
+    %>
+    <%= text_field_tag :instruments,
+    params[:instruments],
+    class: "filter-input",
+    placeholder: "Instrument"
+    %>
+    <%= submit_tag "Search", class: "filter-submit-button" %>
+  <% end %>
   <div class='cards'>
     <% @users.each do |user| %>
       <div class="card-user">
-        <div class="card-image" style="background-image: url(https://images.unsplash.com/photo-1499424017184-418f6808abf9?  ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
-        </div>
+        <%= link_to '', user_path(user), class:"card-image", style:"background-image: url(#{ cl_image_path user.photo.key })" %>
         <div class="card-body">
           <div class="card-info">
             <h4><%= user.username %></h4>
             <p><%= user.location %></p>
-            <p><%= user.instruments %></p>
-            <p><%= user.genres %></p>
-            <p><%= link_to 'See more', user_path(user), style:'text-decoration:none' %></p>
+            <p><%= user.instruments.join(', ') %></p>
+            <p><%= user.genres.join(', ') %></p>
             <% if (favourite = @favourites.find_by(liked: user)).present? %>
               <div class="liked-note"><i class="fa fa-music"></i></div>
             <% else %>
@@ -20,6 +38,7 @@
                 </div>
               <% end %>
             <% end %>
+
           </div>
         </div>
       </div>

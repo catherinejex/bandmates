@@ -4,11 +4,12 @@
     <div class='post'>
       <h1><%= post.user.username %></h1>
       <div class='inner-post'>
-        <img src='https://cdn.mos.cms.futurecdn.net/aKN5fXTyQagKGscKuSDaf9-1200-80.jpg'>
+      <img class='image' src='<%= cl_image_path post.photo.key %>'>
         <div class='inner-post-bottom'>
-          <p>post.description</p>
+        <p><%= post.description %></p>
+          <p><%= post.location %><p>
           <div class='post-info'>
-            <p><%= post.created_at %></p>
+            <p><%= time_ago_in_words(post.created_at)%> ago</p>
           </div>
         </div>
       </div>
