@@ -1,14 +1,20 @@
-@import "_post.scss";
 @import "new.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
+// .poop {
+//   height: 100vh;
+//   width: 100vw;
+//   position: relative;
+// }
 .all-content {
+  // position: absolute;
+  // bottom: 0%;
+  padding-top: 50px;
   height: 100vh;
   width: 100vw;
   font-family: 'Poppins';
   overflow-y: scroll;
 }
-
 .post {
   margin: 0 auto;
   width: 75%;
