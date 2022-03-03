@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">Your favourited users</h1>
+<div class="container">
+  <div class='cards'>
+    <% @favourites.each do |user| %>
+    <div class="card-user">
+      <div class="card-image" style="background-image: url(https://images.unsplash.com/photo-1499424017184-418f6808abf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
+      </div>
+      <div class="card-body">
+        <div class="card-info">
+          <h4><%= user.liked.username %></h4>
+          <p><%= user.liked.location %></p>
+          <p><%= user.liked.instruments %></p>
+          <p><%= user.liked.genres %></p>
+          <p><%= link_to 'See more', user_path(user.liked), style:'text-decoration:none' %></p>
+          <div class="music-note"><i class="fa fa-music"></i></div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
