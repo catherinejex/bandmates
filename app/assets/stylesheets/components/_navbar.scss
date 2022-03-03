@@ -25,7 +25,7 @@
 }
 
 a.dropdown-item {
-  color: white;
+  color: black;
   padding: 4px 6px;
 }
 
@@ -42,8 +42,11 @@ a.dropdown-item {
   padding-left: 5px;
   padding-right: 5px;
   transition: 0.5s;
+  &:hover {
+    color:rgb(164, 67, 255)
+  }
 }
 
-.nav-icon:hover {
-  color:rgb(164, 67, 255)
+.nav-item-dropdown {
+  list-style: none;
 }
