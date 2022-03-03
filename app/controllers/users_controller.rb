@@ -16,9 +16,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @chatroom = Chatroom.find_by(creator: current_user, invited: @user) || Chatroom.find_by(creator: @user, invited: current_user)
   end
-  
+
   private
-  
+
   def user_params
     params.require(:user).permit(:email, :username, :bio, :location, :instruments, :genres, :photo)
   end

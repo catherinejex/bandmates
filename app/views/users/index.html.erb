@@ -1,24 +1,26 @@
 <%= render 'shared/navbar' %>
 
 <div class="container mt-4">
-  <%= form_tag users_path, class: "filter-form", method: :get do %>
-    <%= text_field_tag :location,
-    params[:location],
-    class: "filter-input",
-    placeholder: "Location"
-    %>
-    <%= text_field_tag :genres,
-    params[:genres],
-    class: "filter-input",
-    placeholder: "Genre"
-    %>
-    <%= text_field_tag :instruments,
-    params[:instruments],
-    class: "filter-input",
-    placeholder: "Instrument"
-    %>
-    <%= submit_tag "Search", class: "filter-submit-button" %>
-  <% end %>
+  <div class="search-query">
+    <%= form_tag users_path, class: "filter-form", method: :get do %>
+      <%= text_field_tag :location,
+      params[:location],
+      class: "filter-input",
+      placeholder: "Location"
+      %>
+      <%= text_field_tag :genres,
+      params[:genres],
+      class: "filter-input",
+      placeholder: "Genre"
+      %>
+      <%= text_field_tag :instruments,
+      params[:instruments],
+      class: "filter-input",
+      placeholder: "Instrument"
+      %>
+      <%= submit_tag "Search", class: "filter-submit-button" %>
+    <% end %>
+  </div>
   <div class='cards'>
     <% @users.each do |user| %>
       <div class="card-user">
@@ -30,9 +32,11 @@
             <p><%= user.instruments.join(', ') %></p>
             <p><%= user.genres.join(', ') %></p>
             <% if (favourite = @favourites.find_by(liked: user)).present? %>
+              <%= link_to favourite_path(user),remote: true, method: :delete do%>
               <div class="liked-note"><i class="fa fa-music"></i></div>
+              <%end %>
             <% else %>
-              <%= link_to user_favourites_path(user), method: :post do %>
+              <%= link_to user_favourites_path(user),remote: true, method: :post do %>
                 <div class="music-note">
                   <i class="fa fa-music"></i>
                 </div>
