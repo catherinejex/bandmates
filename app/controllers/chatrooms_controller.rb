@@ -12,6 +12,6 @@ class ChatroomsController < ApplicationController
   end
 
   def index
-    @chatrooms = Chatroom.where(creator: current_user).or(Chatroom.where(invited: current_user))
+    @chatrooms = Chatroom.joins(:messages).group(:id).where(creator: current_user).or(Chatroom.where(invited: current_user))
   end
 end

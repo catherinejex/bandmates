@@ -24,10 +24,12 @@
   <div class='cards'>
     <% @users.each do |user| %>
       <div class="card-user">
-        <%= link_to '', user_path(user), class:"card-image", style:"background-image: url(#{ cl_image_path user.photo.key })" %>
+        <a class='show-link' href="<%= user_path(user) %>">
+          <%= cl_image_tag user.photos.first.key, class:'card-image' %>
+        </a>
         <div class="card-body">
           <div class="card-info">
-            <h4><%= user.username %></h4>
+            <p style="font-size:18px; font-family: Lobster Two, cursive; font-weight:bold"><%= user.username %></p>
             <p><%= user.location %></p>
             <p><%= user.instruments.join(', ') %></p>
             <p><%= user.genres.join(', ') %></p>
@@ -42,7 +44,6 @@
                 </div>
               <% end %>
             <% end %>
-
           </div>
         </div>
       </div>

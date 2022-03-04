@@ -19,8 +19,11 @@
       <%= link_to chatrooms_path, class: "nav-icon" do %>
         <i class="fa fa-thin fa-envelope"></i>
       <% end %>
-        <%= link_to '#', class: "nav-icon" do %>
-          <i class="fa fa-thin fa-user"></i>
+
+      <li class="nav-item dropdown">
+        <%= link_to user_path(current_user), class: "nav-icon" do %>
+          <i class="fa fa-solid fa-user"></i>
+
         <% end %>
     </div>
   </div>

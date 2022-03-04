@@ -1,8 +1,8 @@
 <%= render 'shared/navbar' %>
 
 <div class="banner-show">
-  <% if @user.photo.attached?  %>
-    <%= cl_image_tag @user.photo.key %>
+  <% if @user.photos.attached?  %>
+    <%= cl_image_tag @user.photos.first.key %>
   <% else %>
     <img src="https://images.unsplash.com/photo-1499424017184-418f6808abf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
   <% end %>
@@ -15,11 +15,11 @@
 
 <div class="container mt-3 mb-3">
   <div class="user-info">
-    <h2>Name: <%= @user.username %></h2>
-    <p>Location: <%= @user.location %></p>
-    <p>Instrument: <%= @user.instruments.join(', ') %></p>
-    <p>Genre: <%= @user.genres.join(', ') %></p>
-    <p>Bio: <%= @user.bio %></p>
+    <h2><strong>Name: </strong><%= @user.username %></h2>
+    <p style='margin-top: 10px'><strong>Location: </strong><%= @user.location %></p>
+    <p><strong>Instrument: </strong><%= @user.instruments.join(', ') %></p>
+    <p><strong>Genre: </strong><%= @user.genres.join(', ') %></p>
+    <p><strong>Bio: </strong><%= @user.bio %></p>
     <br>
     <div class="d-flex justify-content-center">
       <% if @chatroom.present? %>
@@ -30,3 +30,4 @@
     </div>
   </div>
 </div>
+<%= render 'shared/footer' %>

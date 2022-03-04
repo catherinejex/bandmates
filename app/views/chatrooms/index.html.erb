@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="all-messages">
-    <h2 class='mb-3'>Chats</h2>
+    <h2 class='mb-3' style="font-family: Lobster, cursive">Chats</h2>
     <% @chatrooms.each do |chatroom| %>
     <%= link_to chatroom_path(chatroom), class:'link-black' do %>
     <div class="user-last-content d-flex">
@@ -20,3 +20,4 @@
     <% end %>
   </div>
 </div>
+<%= render 'shared/footer' %>
