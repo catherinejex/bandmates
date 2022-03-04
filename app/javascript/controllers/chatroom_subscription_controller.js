@@ -6,15 +6,17 @@ export default class extends Controller {
   static targets = ["messages", "form"]
 
   connect() {
+    this.messagesTarget.scrollTo(0, (this.messagesTarget.scrollHeight))
     this.channel = consumer.subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
-      { received: data => this.#insertMessageScrollDownAndResetForm(data) }
+      { received: data => this.insertMessageScrollDownAndResetForm(data) }
     )
+    console.log('Hello from Bandmates!')
   }
 
-  #insertMessageScrollDownAndResetForm(data) {
+  insertMessageScrollDownAndResetForm(data) {
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
-    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+    this.messagesTarget.scrollTo(0, (this.messagesTarget.scrollHeight))
     this.formTarget.reset()
   }
 
