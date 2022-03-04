@@ -7,6 +7,9 @@
         <% if post.photo.attached? %>
           <img class='image' src='<%= cl_image_path post.photo.key%>'>
         <% end %>
+        <% if post.video.attached? %>
+          <%= cl_video_tag post.video.key, controls: true, class:'image' %>
+        <% end %>
         <div class='inner-post-bottom'>
         <p><%= post.description %></p>
           <p><%= post.location %><p>
