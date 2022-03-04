@@ -49,10 +49,12 @@
   border-radius: 5px;
   height: 200px;
 }
-
+.show-link {
+  width: 50%;
+}
 .card-image {
   height: 100%;
-  width: 50%;
+  width: 100%;
   background-size: cover;
   background-position: center;
   position: relative;

@@ -39,7 +39,7 @@ user10.photos.attach(io: File.open('app/assets/images/steeldrum2.jpeg'), filenam
 
 user11 = User.create!(email: "liam@hello.com", password: '123456', username: 'Liam Gallagher', bio: "I’m an average lad who was born in Burnage who played conkers. Conkers, mate. Conkers. The lot. And now I'm in a band and nothing's changed. I like Noel outside the band. Human Noel – that’s my brother – I adore him and I’d do anything for him. But the geezer that’s in this fucking business, he’s one of the biggest cocks in the universe.", location: "Manchester, UK", instruments: ["vocals", "tambourine"], genres: ['britpop'])
 user11.photos.attach(io: File.open('app/assets/images/liam1.jpg'), filename: 'liam1.jpg', content_type: 'image/jpg')
-user11.photos.attach(io: File.open('app/assets/images/liam2.jpg'), filename: 'liam2.jpg', content_type: 'image/jpg')
+user11.photos.attach(io: File.open('app/assets/images/liam2.jpeg'), filename: 'liam2.jpeg', content_type: 'image/jpeg')
 
 
 post1 = Post.create!(description: "Had a great time playing at CBGB's tonight! Off to Philadelphia next.", location: 'East Village, New York', user: user1)
