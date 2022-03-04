@@ -1,15 +1,22 @@
 <%= render 'shared/navbar' %>
 
 <div class="banner-show">
-  <% if @user.photos.attached?  %>
-    <%= cl_image_tag @user.photos.first.key %>
-  <% else %>
-    <img src="https://images.unsplash.com/photo-1499424017184-418f6808abf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-  <% end %>
-  <div class="back-to-index">
-    <%= link_to users_path(@user) do %>
-      <i class="fa fa-arrow-left index"></i>
-    <% end %>
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <% @user.photos.each_with_index do |photo, i| %>
+        <div class="carousel-item <%= "active " if i == 0 %>">
+          <%= cl_image_tag photo.key %>
+        </div>
+      <% end %>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </div>
 
@@ -31,3 +38,8 @@
   </div>
 </div>
 <%= render 'shared/footer' %>
+
+<script>
+  let image = document.querySelector('.carousel-image')
+  console.log(image);
+</script>
