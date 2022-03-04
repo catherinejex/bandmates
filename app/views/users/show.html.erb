@@ -22,11 +22,11 @@
 
 <div class="container mt-3 mb-3">
   <div class="user-info">
-    <h2><strong>Name: </strong><%= @user.username %></h2>
-    <p style='margin-top: 10px'><strong>Location: </strong><%= @user.location %></p>
-    <p><strong>Instrument: </strong><%= @user.instruments.join(', ') %></p>
-    <p><strong>Genre: </strong><%= @user.genres.join(', ') %></p>
-    <p><strong>Bio: </strong><%= @user.bio %></p>
+    <h2> <strong style="font-family: lobster"><%= @user.username %></h2></strong>
+    <p id="body-text" style='margin-top: 10px; '> <i style="margin-right: 2px" class="fa fa-map-pin" id="pin"></i> <%= @user.location %></p>
+    <p id="body-text"><strong >Instruments: </strong><%= @user.instruments.join(', ') %></p>
+    <p id="body-text"><strong>Genres: </strong><%= @user.genres.join(', ') %></p>
+    <p id="body-text"><%= @user.bio %></p>
     <br>
     <div class="d-flex justify-content-center">
       <% if @chatroom.present? %>
