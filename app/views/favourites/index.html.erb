@@ -4,7 +4,7 @@
   <div class='cards'>
     <% @favourites.each do |user| %>
     <div class="card-user">
-      <%= link_to '', user_path(user.liked), class:"card-image", style:"background-image: url(#{ cl_image_path user.liked.photo.key }"%>
+      <%= link_to '', user_path(user.liked), class:"card-image favourites", style:"background-image: url(#{ cl_image_path user.liked.photos.first.key }"%>
       <div class="card-body">
         <div class="card-info">
           <h4><%= user.liked.username %></h4>

@@ -5,7 +5,7 @@
   </small>
   <br>
   <div class="d-flex align-items-center mb-3">
-    <%= cl_image_tag message.user.photo.key, class:'img-avatar-message' %>
+    <%= cl_image_tag message.user.photos.first.key, class:'img-avatar-message' %>
     <p class="message-content flex-grow-1"><%= message.content %></p>
   </div>
 </div>
