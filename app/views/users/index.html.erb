@@ -29,10 +29,10 @@
         </a>
         <div class="card-body">
           <div class="card-info">
-            <p style="font-size:18px; font-family: Lobster Two, cursive; font-weight:bold"><%= user.username %></p>
-            <p><%= user.location %></p>
-            <p><%= user.instruments.join(', ') %></p>
-            <p><%= user.genres.join(', ') %></p>
+            <p style="font-size:16px; font-family: Lobster, cursive; font-weight:bold"><%= user.username %></p>
+            <p> <i class="fa fa-map-pin" id="pin"></i> <%= user.location %></p>
+            <p> <span style="font-size: 18px;">♪</span> <i class="fas fa-guitar"></i> <%= user.instruments.join(', ') %></p>
+            <p> <span style="font-size:10px;">🏷️</span> <%= user.genres.join(', ') %></p>
             <% if (favourite = @favourites.find_by(liked: user)).present? %>
               <%= link_to favourite_path(user),remote: true, method: :delete do%>
               <div class="liked-note"><i class="fa fa-music"></i></div>
