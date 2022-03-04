@@ -1,10 +1,10 @@
-.banner-show img{
+.banner-show {
   background-size: cover;
   background-position: center;
   object-fit: cover;
   height: 300px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 25px;
   position: relative;
 }
 
@@ -18,8 +18,8 @@
 
 .back-to-index {
   position: absolute;
-  top: 55px;
-  left: 10px;
+  top: 10%;
+  left: 5%;
 }
 
 .fa.fa-arrow-left.index {
@@ -35,4 +35,8 @@
 
 #body-text {
   font-family: poppins;
+}
+
+.prevButton {
+  height: 50px;
 }
