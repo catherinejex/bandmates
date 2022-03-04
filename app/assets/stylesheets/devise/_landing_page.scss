@@ -1,21 +1,12 @@
 .landing-main {
   text-align: center;
   font-family: 'Lobster', cursive;
-  color: white;
-  font-size: 80px;
-  padding-top: 270px;
-}
-
-.landing-secondary {
   background: linear-gradient(to right, rgb(174, 92, 255), rgb(0, 27, 180));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  position: relative;
-  text-align: center;
-  font-family: 'Lobster', cursive;
+  text-shadow: 2px 2px 1px white;
   font-size: 80px;
-  bottom: 101px;
-  left: 1px;
+  padding-top: 270px;
 }
 
  .landing {
@@ -31,6 +22,10 @@
  .landing-p {
    color: white;
    text-align: center;
+   font-family: 'Montserrat', sans-serif;
+   font-style: italic;
+   font-weight: 100;
+   font-size: 20px;
  }
 
  .login-btn {
@@ -43,6 +38,8 @@
    background-image: linear-gradient(to right, rgb(164, 67, 255), rgb(0, 27, 180));
    a {
      color: white;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 100;
      text-decoration: none;
    }
  }
@@ -56,6 +53,8 @@
     background-image: linear-gradient(to right, rgb(164, 67, 255), rgb(0, 27, 180));
     a {
       color: white;
+      font-weight: 100;
+      font-family: 'Montserrat', sans-serif;
       text-decoration: none;
     }
  }
