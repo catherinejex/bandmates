@@ -32,10 +32,13 @@
   }
 }
 .inner-post {
+  background-color: rgb(240, 240, 240);
+  // color: black;
   background: linear-gradient(to right, rgb(14, 7, 122), rgb(158, 67, 233));
   color: white;
   height: 90%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  // box-shadow: rgba(97, 62, 194, 0.788) 4px 4px 10px;
 }
 .inner-post-bottom {
   display: flex;
