@@ -13,6 +13,9 @@ abbr[title*="required"] {
   display: flex;
   justify-content: left;
 }
+.content {
+  display: flex;
+}
 .sign-up-module {
   padding-left: 20px;
   padding-right: 20px;
@@ -40,6 +43,21 @@ abbr[title*="required"] {
 #third {
   padding-top: 50px;
   color: white;
+  h1 {
+    margin-bottom: 40px;
+  }
+  input {
+    height: 150px;
+    width: 90%;
+  }
+}
+
+#fifth {
+  padding-top: 100px;
+  color: white;
+  input {
+    border-radius: 50px;
+  }
 }
 .card-category {
   width: 90vw;
