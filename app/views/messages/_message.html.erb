@@ -1,11 +1,25 @@
-<div id="message-<%= message.id %>">
-  <small>
-    <strong><%= message.user.username %></strong>
-    <i><%= message.created_at.strftime("%l:%M %p") %></i>
-  </small>
-  <br>
-  <div class="d-flex align-items-center mb-3">
-    <%= cl_image_tag message.user.photos.first.key, class:'img-avatar-message' %>
-    <p class="message-content flex-grow-1"><%= message.content %></p>
+<% if message.user != current_user %>
+  <div id="message-<%= message.id %>">
+    <small>
+      <strong><%= message.user.username %></strong>
+      <i><%= message.created_at.strftime("%l:%M %p") %></i>
+    </small>
+    <br>
+    <div class="d-flex align-items-center mb-3">
+      <%= cl_image_tag message.user.photos.first.key, class:'img-avatar-message' %>
+      <p class="message-content"><%= message.content %></p>
+    </div>
   </div>
-</div>
+<% else %>
+  <div id="message-<%= message.id %>" style='text-align: right'>
+    <small class='right-name'>
+      <i><%= message.created_at.strftime("%l:%M %p") %></i>
+      <strong><%= message.user.username %></strong>
+    </small>
+    <br>
+    <div class="d-flex align-items-center justify-content-end mb-3">
+      <p class="message-content current-user" style="text-align: left"><%= message.content %></p>
+      <%= cl_image_tag message.user.photos.first.key, class:'img-avatar-message right' %>
+    </div>
+  </div>
+<% end %>

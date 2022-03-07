@@ -4,6 +4,9 @@
   <div class="all-messages">
     <h2 class='mb-3' style="font-family: Lobster, cursive">Chats</h2>
     <% @chatrooms.each do |chatroom| %>
+    <%# <strong><%= chatroom.messages.last.user.username %>
+    <%# <i><%= chatroom.messages.last.created_at.strftime("%l:%M %p") %>
+    <%# <br> %>
     <%= link_to chatroom_path(chatroom), class:'link-black' do %>
     <div class="user-last-content d-flex">
       <% if chatroom.creator != current_user %>
