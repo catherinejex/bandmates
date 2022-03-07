@@ -2,20 +2,20 @@
 <div class='all-content'>
   <% @posts.each do |post| %>
     <div class='post'>
-      <h3><%= post.user.username %></h3>
-      <div class='inner-post'>
-        <% if post.photo.attached? %>
-          <img class='image' src='<%= cl_image_path post.photo.key%>'>
-        <% end %>
-        <% if post.video.attached? %>
-          <%= cl_video_tag post.video.key, controls: true, class:'image' %>
-        <% end %>
-        <div class='inner-post-bottom'>
-        <p><%= post.description %></p>
-          <p><%= post.location %><p>
-          <div class='post-info'>
-            <p><%= time_ago_in_words(post.created_at)%> ago</p>
-          </div>
+      <div class='name'>
+        <h2><%= post.user.username %></h2>
+      </div>
+      <% if post.photo.attached? %>
+        <img class='image' src='<%= cl_image_path post.photo.key%>'>
+      <% end %>
+      <% if post.video.attached? %>
+        <%= cl_video_tag post.video.key, controls: true, class:'image' %>
+      <% end %>
+      <div class='post-bottom'>
+      <p><%= post.description %></p>
+        <p><%= post.location %><p>
+        <div class='post-info'>
+          <p><%= time_ago_in_words(post.created_at)%> ago</p>
         </div>
       </div>
     </div>
