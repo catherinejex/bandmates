@@ -1,20 +1,32 @@
 .btn-message-send {
-  margin: 4px 10px 20px 10px;
+  // margin: 4px 10px 20px 10px;
   // background-image: linear-gradient(to right, rgb(152, 152, 233), rgb(207, 60, 207));
   background: linear-gradient(to right, #a443ff, #001bb4);
-  border-radius: 5px;
+  // background-color: rgb(236, 233, 233);
+  border-radius: 25px;
   border: none;
-  width: 30%;
+  width: 25%;
+  position: absolute;
+  right: 31px;
+  bottom: 34px;
+  padding: 5px;
 }
 
 .message-content {
   // background-image: linear-gradient(to right, rgb(152, 152, 233), rgb(207, 60, 207));
   background-color: rgb(236, 233, 233);
-  border-radius: 5px;
-  padding: 15px;
+  border-radius: 25px;
+  padding: 15px 20px 15px 20px;
   margin: 0px;
   font-size: 14px;
+  // width: max-content;
+  width: 60%;
 }
+
+// .message-content.current-user {
+//   background-color: rgb(253, 253, 253);
+//   border: 1px solid rgb(197, 197, 197);
+// }
 
 .chatroom {
   padding-left: 20px;
@@ -31,30 +43,57 @@
   margin-right: 10px;
 }
 
+.img-avatar-message.right {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
 #message_content {
   height: 50px;
-  margin-bottom: 0px !important;
-  border-radius: 5px;
+  border-radius: 25px;
+  background-color: #f5f3f3;
+  border: none;
+  position: relative;
+  width: 100%;
+  padding-right: 125px;
+  padding-top: 12px;
+  padding-left: 15px;
 }
 
 .back-navbar {
   position: fixed;
   top: 50px;
   width: 100%;
-  padding: 10px 15px 10px 15px;
+  padding: 10px 15px 0px 15px;
   background-color: rgb(255, 255, 255);
 }
 
 .sending-message {
   position: fixed;
-  bottom: 40px;
+  // bottom: 40px;
   background-color: white;
-  width: 92%;
-  padding: 5px 15px 10px 15px;
+  width: 100%;
+  // padding: 5px 15px 10px 15px;
   // margin-right: 10px;
+  margin-bottom: 60px;
 }
 
 .messages {
-  height: 660px;
+  height: 675px;
   overflow: scroll;
+}
+
+.right-name {
+  text-align: right;
+  width: 100%;
+  margin-left: 210px;
+}
+
+#new_message {
+  margin: 10px 20px;
+}
+
+textarea {
+  resize: none;
+  outline: none;
 }
