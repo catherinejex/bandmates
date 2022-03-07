@@ -1,8 +1,5 @@
 <%= render 'shared/navbar' %>
 <div class='all-posts'>
-    <div class="post">
-      <%# <iframe class="image" style="border-radius:12px" src="https://open.spotify.com/embed/track/7tK4NqOuGcdykYx5FemHyS?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> %>
-    </div>
   <% @posts.each do |post| %>
     <div class='post'>
       <div class='top-card'>
@@ -18,6 +15,10 @@
         <% if post.video.attached? %>
           <%= cl_video_tag post.video.key, controls: true, class:'image' %>
         <% end %>
+        <% if post.spotify_link.present? %>
+          <iframe class="image" style="border-radius:12px" src='<%= post.spotify_link %>' width="100%" height="380" frameBorder="0"></iframe>
+        <% end %>
+
         <div class='inner-post-bottom'>
           <div class="feed-icons">
             <div class="icon-feed">

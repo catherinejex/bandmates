@@ -5,6 +5,7 @@
     <%= simple_form_for @post do |f| %>
       <%= f.input :photo, as: :file, class:"photo-input" %>
       <%= f.input :video, as: :file, class:"photo-input" %>
+      <%= f.input :spotify_link %>
       <%= f.input :description %>
       <%= f.input :location %>
       <div class="text-center">
