@@ -10,13 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2022_03_07_151502) do
-=======
 
-ActiveRecord::Schema.define(version: 2022_03_07_141546) do
-
->>>>>>> d7ebacac6f1cd3bfcca1a75138634fea5284f8ae
+ActiveRecord::Schema.define(version: 2022_03_08_100630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +88,7 @@ ActiveRecord::Schema.define(version: 2022_03_07_141546) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "location"
     t.string "spotify_link"
+    t.string "youtube_link"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -101,7 +97,7 @@ ActiveRecord::Schema.define(version: 2022_03_07_141546) do
     t.string "taggable_type"
     t.integer "taggable_id"
     t.string "tagger_type"
-    t.integer "tagger_id"
+    t.integer "tagger_id"<<<<<<< adding-more-seeds
     t.string "context", limit: 128
     t.datetime "created_at"
     t.index ["context"], name: "index_taggings_on_context"

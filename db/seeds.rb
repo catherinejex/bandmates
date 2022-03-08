@@ -9,10 +9,10 @@ User.delete_all
 user1 = User.create!(email: "kermit@hello.com", password: "123456", username: "Kermit Green", bio: "I'm a 20 year drumming veteran, I can play any style because I'm a G. I am looking for people to form a band with and sell out Wembley. Ive played with big names like Rammstein and 50 Cent", location: "Stoke Newington", instrument_list: ["Drums", "Vocals" , "Triangle"], genre_list: ["Rock", "Jazz", "Funk"], experience: "Professional" )
 user1.photos.attach(io: File.open('app/assets/images/drummer.jpg'), filename: 'drummer.jpg', content_type: 'image/jpg')
 
-user2 = User.create!(email: "rick@hello.com", password: "123456", username: "Rick the Madman", bio: "Im just learning the guitar guys. Can someone let me join their band, am trying to learn. Can also make a good cup of coffee.", location: "Los Angeles", instrument_list: ["Guitar"], genre_list: ["Punk"], experience: "Beginner" )
+user2 = User.create!(email: "rick@hello.com", password: "123456", username: "Rick the Madman", bio: "I'm just learning the guitar guys. Can someone let me join their band, am trying to learn. Can also make a good cup of coffee.", location: "Los Angeles", instruments: ["Guitar"], genres: ["Punk"] )
 user2.photos.attach(io: File.open('app/assets/images/guitar.jpg'), filename: 'guitar.jpg', content_type: 'image/jpg')
 
-user3 = User.create!(email: "zoe@hello.com", password: "123456", username: "Zoe Monet", bio: "I play the violin. Have sold out shows. Classically trained. Serious enquiries only", location: "Paris", instrument_list: ["Violin"], genre_list: ["Classical"] )
+user3 = User.create!(email: "zoe@hello.com", password: "123456", username: "Zoe Monet", bio: "I play the violin. I have sold out shows. Classically trained. Serious enquiries only. I also teach violin at the musical school I used to go when I was little.", location: "Paris", instruments: ["Violin"], genres: ["Classical"] )
 user3.photos.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'violin.jpg', content_type: 'image/jpg')
 
 user4 = User.create!(email: "james@hello.com", password: "123456", username: "James Rodriguez", bio: "I play the bongos. Im a bit of a big deal back in Cuba. Send me a DM and I will see if you are worthy to play with me", location: "Havana", instrument_list: ["Bongos", "Flute"], genre_list: ["Latin"], experience: "Novice" )
@@ -70,8 +70,8 @@ user18.photos.attach(io: File.open('app/assets/images/cello.jpeg'), filename: 'c
 post1 = Post.create!(description: "Had a great time playing at CBGB's tonight! Off to Philadelphia next.", location: 'East Village, New York', user: user1)
 post1.photo.attach(io: File.open('app/assets/images/srv.jpeg'), filename: 'srv.jpeg', content_type: 'image/jpeg')
 
-post2 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user2)
-post2.photo.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'violin.jpeg', content_type: 'image/jpg')
+post2 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user3)
+post2.photo.attach(io: File.open('app/assets/images/Violin-Teacher.jpg'), filename: 'Violin-Teacher.jpg', content_type: 'image/jpg')
 
 post3 = Post.create!(description: "Are you looking for a producer? I can fully mix and master your music, £30/hour. Inquire for details", location: 'Houston, Texas', user: user4)
 post3.photo.attach(io: File.open('app/assets/images/studio.jpg'), filename: 'studio.jpg', content_type: 'image/jpg')
@@ -80,5 +80,8 @@ post4 = Post.create!(description: "Come see us play tonight at Slim Jim's! We wi
 post4.photo.attach(io: File.open('app/assets/images/slimjims.jpeg'), filename: 'slimjims.jpeg', content_type: 'image/jpeg')
 
 post5 = Post.create!(description: "New music alert! Check out 'Synthetic Skin' on Spotify and Bandcamp!", location: "Alabama, USA", spotify_link: "https://open.spotify.com/embed/track/7tK4NqOuGcdykYx5FemHyS?utm_source=generator", user: user15)
+
+post6 = Post.create!(description: "Checkout my new single 'iPhone' on youtube!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/WWOU5Q5bh98", user: user16)
+
 
 puts "finished"
