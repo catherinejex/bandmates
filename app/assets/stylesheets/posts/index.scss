@@ -1,6 +1,7 @@
 @import "new.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
+<<<<<<< HEAD
 // .poop {
 //   height: 100vh;
 //   width: 100vw;
@@ -16,24 +17,36 @@
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: rgb(212, 212, 212);
+=======
+.all-posts {
+  margin-top: 58px;
+  margin-bottom: 58px;
+>>>>>>> 2285a1863efdfde605c6293e2d82384e8dcdb976
 }
+
 .post {
   margin: 0 auto;
+<<<<<<< HEAD
   margin-bottom: 10px;
   width: 100%;
   height: 60vh;
   // margin-bottom: 15px;
   h2 {
+=======
+  width: 100%;
+  height: 100%;
+  margin-bottom: 35px;
+  h3 {
+>>>>>>> 2285a1863efdfde605c6293e2d82384e8dcdb976
     margin-bottom: 0;
-    // background-image: linear-gradient(to right, rgb(14, 7, 122), rgb(211, 28, 248), rgb(233, 94, 191));
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    font-family: 'Lobster', cursive;
+    font-family: 'Poppins';
+    font-weight: bolder;
   }
   image {
     height: 55%;
   }
 }
+<<<<<<< HEAD
 .name {
   height: 7%;
   background-color: rgb(255, 255, 255);
@@ -51,14 +64,67 @@
   padding-left: 30px;
   padding-bottom: 10px;
   background-color: rgb(255, 255, 255);
+=======
+
+.avatar-feed {
+  width: 43px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 7px;
+  object-fit: cover;
+  background-position: center;
 }
-.post-info {
+
+.top-card {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  color: black;
+>>>>>>> 2285a1863efdfde605c6293e2d82384e8dcdb976
+}
+.inner-post-bottom {
+  font-family: 'Poppins';
+  margin: 0 9px;
+  font-size: 14px;
+  .date {
+    font-size: 12px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.feed-icons {
+  display: flex;
+  padding: 0px 2px 6px;
+  color:rgb(132, 0, 255)
+}
+
+.icon-feed {
+  margin-right: 9px;
+}
+
+.post-info {
+margin-left: 53px;
+font-family: 'Poppins';
+margin-bottom: 0;
+  h3 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .image {
   width: 100%;
+<<<<<<< HEAD
   height: 48%;
+=======
+  border-radius: 13px;
+  height: 50%;
+  padding: 6px;
+>>>>>>> 2285a1863efdfde605c6293e2d82384e8dcdb976
   object-fit: cover;
 }

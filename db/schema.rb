@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 2022_03_07_151502) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "location"
+    t.string "spotify_link"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

@@ -1,16 +1,19 @@
 <%= render 'shared/navbar' %>
-<div class="container mt-5"></div>
-  <h1 class='text-center pt-3' style="font-family: 'Lobster', sans-serif;">Create post</h1>
-  <div class='form-container'>
-    <%= simple_form_for @post do |f| %>
-      <%= f.input :photo, as: :file, class:"photo-input" %>
-      <%= f.input :video, as: :file, class:"photo-input" %>
-      <%= f.input :description %>
-      <%= f.input :location %>
-      <div class="text-center">
-        <%= f.submit "Share", class:'submit-button' %>
-      </div>
-    <% end %>
+<div class="bp">
+  <div class="container" style="margin-top: 65px">
+    <h1 class='text-center pt-3' style="font-family: 'Lobster', sans-serif; color:white">Create post</h1>
+    <div class='form-container'>
+      <%= simple_form_for @post do |f| %>
+        <%= f.input :photo, as: :file, class:"photo-input" %>
+        <%= f.input :video, as: :file, class:"photo-input" %>
+        <%= f.input :spotify_link %>
+        <%= f.input :description %>
+        <%= f.input :location %>
+        <div class="text-center">
+          <%= f.submit "Share", class:'submit-button' %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 <%= render 'shared/footer' %>
