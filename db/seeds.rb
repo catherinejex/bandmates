@@ -81,12 +81,11 @@ user19.photos.attach(io: File.open('app/assets/images/wiley3.jpg'), filename: 'w
 
 post1 = Post.create!(description: "I've been listening to some really good throwbacks lately 🖤", location: 'Kingston Upon Thames, Greater London', youtube_link: "https://www.youtube.com/embed/6A1xu0BSs2s", user: user14)
 
+post2 = Post.create!(description: "Are you looking for a producer? I can fully mix and master your music, £30/hour. Inquire for details", location: 'Houston, Texas', user: user13)
+post2.photo.attach(io: File.open('app/assets/images/studio.jpg'), filename: 'studio.jpg', content_type: 'image/jpg')
 
-post2 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user3)
-post2.photo.attach(io: File.open('app/assets/images/Violin-Teacher.jpg'), filename: 'Violin-Teacher.jpg', content_type: 'image/jpg')
-
-post3 = Post.create!(description: "Are you looking for a producer? I can fully mix and master your music, £30/hour. Inquire for details", location: 'Houston, Texas', user: user13)
-post3.photo.attach(io: File.open('app/assets/images/studio.jpg'), filename: 'studio.jpg', content_type: 'image/jpg')
+post3 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user3)
+post3.photo.attach(io: File.open('app/assets/images/Violin-Teacher.jpg'), filename: 'Violin-Teacher.jpg', content_type: 'image/jpg')
 
 post4 = Post.create!(description: "Come see us play tonight at Slim Jim's! We will be opening for The Radio Dept. and we go on at 9pm!", location: "Angel, London", user: user7)
 post4.photo.attach(io: File.open('app/assets/images/post4.jpg'), filename: 'post4.jpg', content_type: 'image/jpg')
@@ -96,7 +95,10 @@ post5 = Post.create!(description: "New music alert! Check out 'Catherine's Space
 post6 = Post.create!(description: "Our new album 'Glow On' is out now on Spotify, iTunes, or wherever you get your music.", location: 'Baltimore, Maryland, USA', user: user1)
 post6.photo.attach(io: File.open('app/assets/images/turnstile_album.jpg'), filename: 'turnstile_album.jpeg', content_type: 'image/jpeg')
 
-post7 = Post.create!(description: "Checkout my new single 'iPhone' on youtube!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/WWOU5Q5bh98", user: user16)
+post7 = Post.create!(description: "Checkout my new single 'iPhone' on Youtube!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/-It7KNlYIXU", user: user16)
+
+post8 = Post.create!(description: "If anyone is interested I have two tickets for this Saturday London Symphony Orchestra concert.", location: 'London, UK', user: user18)
+post8.photo.attach(io: File.open('app/assets/images/orchestra1.jpeg'), filename: 'orchestra1.jpeg', content_type: 'image/jpeg')
 
 
 puts "finished"
