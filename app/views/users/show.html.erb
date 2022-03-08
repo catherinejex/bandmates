@@ -24,8 +24,9 @@
   <div class="user-info">
     <h2> <strong style="font-family: lobster"><%= @user.username %></h2></strong>
     <p id="body-text" style='margin-top: 10px; '> <i style="margin-right: 2px" class="fa fa-map-pin" id="pin"></i> <%= @user.location %></p>
-    <p id="body-text"><strong >Instruments: </strong><%= @user.instruments.join(', ') %></p>
-    <p id="body-text"><strong>Genres: </strong><%= @user.genres.join(', ') %></p>
+    <p id="body-text"><strong >Instruments: </strong><%= @user.instrument_list.join(', ') %></p>
+    <p id="body-text"><strong>Genres: </strong><%= @user.genre_list.join(', ') %></p>
+    <p id="body-text"><strong>Experience: </strong><%= @user.experience %></p>
     <p id="body-text"><%= @user.bio %></p>
     <br>
     <div class="d-flex justify-content-center">
