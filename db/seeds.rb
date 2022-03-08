@@ -53,6 +53,20 @@ user14.photos.attach(io: File.open('app/assets/images/cat.JPG'), filename: 'cat.
 user15 = User.create!(email: "jlh@hello.com", password: '123456', username: 'Just Like Heaven', bio: "Just Like Heaven- an alternative rock group based in Birmingham, AL. Check us out on Spotify, Bandcamp, Facebook, and Instagram", location: "Alabama, USA", instruments: ["Vocals", "Lead guitar", "Rhythm guitar","Bass", "Drums"], genres: ["Alternative Rock"])
 user15.photos.attach(io: File.open('app/assets/images/jlh.jpg'), filename: 'jlh.jpg', content_type: 'image/jpg')
 
+user16 = User.create!(email: "seb@hello.com", password: '123456', username: 'Seb Lowe', bio: "Hi, my name is Seb, I'm a singer and songwriter. I play accoustic guitar. I wrote a 7 track mini-album called 'Half-decent', which should be dropping soon on Spotify and other platforms. I'm also looking for a producer, if anyone is interested please send me a message!", location: "Manchester, UK", instruments: ["Vocals", "Accoustic guitar"], genres: ["Alternative", "Indie"])
+user16.photos.attach(io: File.open('app/assets/images/seb-lowe-2-2.jpg'), filename: 'seb-lowe-2-2.jpg', content_type: 'image/jpg')
+user16.photos.attach(io: File.open('app/assets/images/seb.jpg'), filename: 'seb.jpg', content_type: 'image/jpg')
+
+user17 = User.create!(email: "luca@hello.com", password: '123456', username: 'Luca Renzi', bio: "Ciao, I'm Luca from Rome. I've been playing clarinet all my life and I'm very passionate about my music. I have live gigs mostly in Italy, but I'll be soon playing in London, and I would love to meet up with some fellow musicians! You can find me in 'Ain't Nothin But The Blues Bar' on Friday's night.", location: "Rome, Italy", instruments: ["Clarinet", "Flute"], genres: ['Jazz', 'Blues'])
+user17.photos.attach(io: File.open('app/assets/images/luca.jpeg'), filename: 'luca.jpeg', content_type: 'image/jpg')
+user17.photos.attach(io: File.open('app/assets/images/luca-bar.jpeg'), filename: 'luca-bar.jpeg', content_type: 'image/jpg')
+
+user18 = User.create!(email: "cello@hello.com", password: '123456', username: 'Cello Girl', bio: "Hi there, I'm Sarah, but I usually go by the name of Cello Girl. I started playing cello when I was a little girl and I used to play for London Symphony Orchestra. I'm now working as a cello teacher, but I always wanted to be a part of a small classical band. If anyone is looking for a cellist, let me know in the messages. ", location: "Watford, UK", instruments: ["Cello"], genres: ["Classical", "Symphony", "Concerto"])
+user18.photos.attach(io: File.open('app/assets/images/cello-girl.jpeg'), filename: 'cello-girl.jpeg', content_type: 'image/jpg')
+user18.photos.attach(io: File.open('app/assets/images/cello-girl2.jpeg'), filename: 'cello-girl2.jpeg', content_type: 'image/jpg')
+user18.photos.attach(io: File.open('app/assets/images/cello.jpeg'), filename: 'cello.jpeg', content_type: 'image/jpg')
+
+
 post1 = Post.create!(description: "Had a great time playing at CBGB's tonight! Off to Philadelphia next.", location: 'East Village, New York', user: user1)
 post1.photo.attach(io: File.open('app/assets/images/srv.jpeg'), filename: 'srv.jpeg', content_type: 'image/jpeg')
 
