@@ -7,18 +7,32 @@
 
       <%= link_to '', user_path(user.liked), class:"card-image favourites", style:"background-image: url(#{ cl_image_path user.liked.photos.first.key }"%>
 
-      <div class="card-body">
-        <div class="card-info">
+      <div class="card-body" id="icons-favs-page">
+        <div class="card-info" >
           <h4 style="font-size:16px; font-family: Lobster, cursive; font-weight:bold"><%= user.liked.username %></h4>
           <p> <i class="fa fa-map-pin" id="pin"></i> <%= user.liked.location %></p>
           <p><span style="font-size: 18px;">♪</span><%= user.liked.instruments.join(', ') %></p>
           <p><span style="font-size:10px;">🏷️</span><%= user.liked.genres.join(', ') %></p>
-          <%= link_to favourite_path(user.liked),remote: true, method: :delete do%>
-            <div class="liked-note">
-              <i class="fa fa-music"></i>
-            </div>
-          <%end %>
 
+          <div class="favourites-card">
+            <% chatroom = Chatroom.find_by(creator: current_user, invited: user.liked) || Chatroom.find_by(creator: user.liked, invited: current_user) %>
+            <% if chatroom.present? %>
+              <%= link_to chatroom_path(chatroom) do%>
+                <i class="fa fa-thin fa-envelope" id="chatroom-link-favourites-page"></i>
+              <% end %>
+            <% elsif user.liked != current_user %>
+              <%= link_to user_chatrooms_path(user.liked), method: :post do %>
+                 <i class="fa fa-thin fa-envelope" id="chatroom-link-favourites-page"></i>
+              <% end %>
+            <% end %>
+
+            <%= link_to favourite_path(user.liked),remote: true, method: :delete do%>
+              <div class="liked-note-favs-page">
+                <i class="fa fa-music"></i>
+              </div>
+            <%end %>
+
+          </div>
         </div>
       </div>
     </div>

@@ -22,7 +22,22 @@
 
 <div class="container mt-3 mb-3">
   <div class="user-info">
-    <h2> <strong style="font-family: lobster"><%= @user.username %></h2></strong>
+   <div class="d-flex justify-content-between">
+     <h2> <strong style="font-family: lobster"><%= @user.username %></h2></strong>
+     <% if (favourite = @favourite.find_by(liked: @user)).present? && @user != current_user%>
+        <%= link_to favourite_path(@user),remote: true, method: :delete do%>
+          <div id="show-page-liked-button"><i class="fa fa-music"></i></div>
+        <%end %>
+      <% elsif @user != current_user %>
+        <%= link_to user_favourites_path(@user),remote: true, method: :post do %>
+          <div id="show-page-like-button">
+            <i class="fa fa-music"></i>
+          </div>
+        <% end %>
+      <% end %>
+   </div>
+
+
     <p id="body-text" style='margin-top: 10px; '> <i style="margin-right: 2px" class="fa fa-map-pin" id="pin"></i> <%= @user.location %></p>
     <p id="body-text"><strong >Instruments: </strong><%= @user.instruments.join(', ') %></p>
     <p id="body-text"><strong>Genres: </strong><%= @user.genres.join(', ') %></p>

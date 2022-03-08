@@ -1,8 +1,23 @@
 <%= render 'shared/navbar' %>
-<div class='all-content'>
+
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="pills-posts-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All Posts</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-posts-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Fav Users</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+    <div class='all-content'>
   <% @posts.each do |post| %>
     <div class='post'>
-      <h3><%= post.user.username %></h3>
+
+      <%= link_to user_path(post.user) do %>
+      <h3 style="color: black"><%= post.user.username %></h3>
+      <% end %>
+
       <div class='inner-post'>
         <% if post.photo.attached? %>
           <img class='image' src='<%= cl_image_path post.photo.key%>'>
@@ -23,4 +38,62 @@
   <br>
   <br>
 </div>
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div class="all-content favourite-content" data-controller="favourite-posts" data-favourite-posts-target="output" >
+  <% @faves.each do |faves| %>
+    <div class='post'>
+      <%= link_to user_path(faves.user) do %>
+      <h3 style="color: black"><%= faves.user.username %></h3>
+      <% end %>
+
+      <div class='inner-post'>
+        <% if faves.photo.attached? %>
+          <img class='image' src='<%= cl_image_path faves.photo.key%>'>
+        <% end %>
+        <% if faves.video.attached? %>
+          <%= cl_video_tag faves.video.key, controls: true, class:'image' %>
+        <% end %>
+        <div class='inner-post-bottom'>
+        <p><%= faves.description %></p>
+          <p><%= faves.location %><p>
+          <div class='post-info'>
+            <p><%= time_ago_in_words(faves.created_at)%> ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <br>
+  <br>
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%= render 'shared/footer' %>
