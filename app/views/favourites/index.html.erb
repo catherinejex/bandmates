@@ -1,6 +1,6 @@
 <%= render 'shared/navbar' %>
 <h2 style="text-align: center; margin-top: 70px; font-family: Lobster, cursive">My favourites</h2>
-<div class="container">
+<%# <div class="container"> %>
   <div class='cards'>
     <% @favourites.each do |user| %>
     <div class="card-user">
@@ -10,9 +10,10 @@
       <div class="card-body" id="icons-favs-page">
         <div class="card-info" >
           <h4 style="font-size:16px; font-family: Lobster, cursive; font-weight:bold"><%= user.liked.username %></h4>
-          <p> <i class="fa fa-map-pin" id="pin"></i> <%= user.liked.location %></p>
+          <%# <p> <i class="fa fa-map-pin" id="pin"></i> <%= user.liked.location %>
           <p><span style="font-size: 18px;">♪</span><%= user.liked.instruments.join(', ') %></p>
           <p><span style="font-size:10px;">🏷️</span><%= user.liked.genres.join(', ') %></p>
+          <p style='font-size: 14px;'><i class="fa fa-map-marker" style='color: #9F1212' aria-hidden="true"></i>  <%= user.liked.location %></p>
 
           <div class="favourites-card">
             <% chatroom = Chatroom.find_by(creator: current_user, invited: user.liked) || Chatroom.find_by(creator: user.liked, invited: current_user) %>
@@ -38,5 +39,5 @@
     </div>
     <% end %>
   </div>
-</div>
+<%# </div> %>
 <%= render 'shared/footer' %>
