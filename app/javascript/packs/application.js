@@ -15,3 +15,9 @@ ActiveStorage.start()
 import "controllers"
 import "bootstrap"
 import "favourite"
+import { initSlider } from './init_slider'
+
+
+document.addEventListener('turbolinks:load', () => {
+  initSlider();
+})
