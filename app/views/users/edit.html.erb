@@ -1,31 +1,38 @@
 <%= render 'shared/navbar' %>
-<div class="banner-show">
-  <% if @user.photo.attached?  %>
-    <%= cl_image_tag @user.photo.key %>
-  <% else %>
-    <img src="https://images.unsplash.com/photo-1499424017184-418f6808abf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
-  <% end %>
-  <div class="back-to-index">
-    <%= link_to users_path(@user) do %>
-      <i class="fa fa-arrow-left index"></i>
+  <div class="banner-show">
+    <% if @user.photos.attached?  %>
+      <%= cl_image_tag @user.photos.first.key %>
+    <% else %>
+      <img src="https://images.unsplash.com/photo-1499424017184-418f6808abf9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
     <% end %>
-  </div>
-</div>
-<div class="container mt-3 mb-3">
-  <div class="user-info">
-    <h2>Name: <%= @user.username %></h2>
-    <p>Location: <%= @user.location %></p>
-    <p>Instrument: <%= @user.instruments.join(', ') %></p>
-    <p>Genre: <%= @user.genres.join(', ') %></p>
-    <p>Bio: <%= @user.bio %></p>
-    <br>
-    <div class="d-flex justify-content-center">
-      <% if @chatroom.present? %>
-        <%= link_to 'Send a message', chatroom_path(@chatroom), class:'btn btn-primary btn-sendmessage'  %>
-      <% elsif @user != current_user %>
-        <%= link_to 'Send a message', user_chatrooms_path(@user), method: :post, class:'btn btn-primary btn-sendmessage'  %>
+    <div class="back-to-index">
+      <%= link_to users_path(@user) do %>
+        <i class="fa fa-arrow-left index"></i>
       <% end %>
     </div>
   </div>
-</div>
-<%= render 'shared/footer' %>
+  <div class='form'>
+    <%= simple_form_for @user,  method: :patch do |f| %>
+      <div class="form-inputs">
+        <div class='input-and-label'>
+          <%= f.input :username, label: false, :input_html => {  } %>
+        </div>
+        <div class='input-and-label'>
+          <%= f.input :location, label: false, :input_html => {  } %>
+        </div>
+        <div class='input-and-label'>
+          <%= f.input :instrument_list, label: false %>
+        </div>
+        <div class='input-and-label'>
+          <%= f.input :genre_list, label: false %>
+        </div>
+        <div class='input-and-label'>
+          <%= f.input :bio, class:'bio', label: false, :input_html => {  } %>
+        </div>
+      </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Update" %>
+      </div>
+    <% end %>
+    <%= render 'shared/footer' %>
+  </div>

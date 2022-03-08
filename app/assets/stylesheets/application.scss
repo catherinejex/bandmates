@@ -12,15 +12,16 @@
 @import "components/index";
 @import "pages/index";
 
+
 @import "devise/login";
 
 @import "users/index";
 @import "users/show";
+@import "users/edit";
 
 @import "posts/index";
 @import "posts/new";
 @import "devise/signup";
-@import "devise/edit";
 @import "chatrooms/show";
 @import "chatrooms/index";
 
