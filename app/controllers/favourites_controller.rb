@@ -6,7 +6,7 @@ class FavouritesController < ApplicationController
   def create
     @favourite = Favourite.new(liker: current_user, liked: User.find(params[:user_id]))
     @favourite.save
-    redirect_to users_path
+    redirect_to request.referrer
   end
 
   def destroy

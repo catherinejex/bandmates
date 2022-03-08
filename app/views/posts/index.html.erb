@@ -1,4 +1,5 @@
 <%= render 'shared/navbar' %>
+
 <div class='all-posts'>
   <% @posts.each do |post| %>
     <div class='post'>
@@ -41,4 +42,62 @@
     </div>
   <% end %>
 </div>
+  </div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+    <div class="all-content favourite-content" data-controller="favourite-posts" data-favourite-posts-target="output" >
+  <% @faves.each do |faves| %>
+    <div class='post'>
+      <%= link_to user_path(faves.user) do %>
+      <h3 style="color: black"><%= faves.user.username %></h3>
+      <% end %>
+
+      <div class='inner-post'>
+        <% if faves.photo.attached? %>
+          <img class='image' src='<%= cl_image_path faves.photo.key%>'>
+        <% end %>
+        <% if faves.video.attached? %>
+          <%= cl_video_tag faves.video.key, controls: true, class:'image' %>
+        <% end %>
+        <div class='inner-post-bottom'>
+        <p><%= faves.description %></p>
+          <p><%= faves.location %><p>
+          <div class='post-info'>
+            <p><%= time_ago_in_words(faves.created_at)%> ago</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <br>
+  <br>
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <%= render 'shared/footer' %>

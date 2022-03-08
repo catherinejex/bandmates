@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
   def index
+
     @posts = Post.all.reverse
+    @favourites = Favourite.where(liker: current_user)
+    faved_ids = @favourites.map { |e| e.liked_id }
+    @faves = Post.where(user: faved_ids)
+
   end
 
   def new

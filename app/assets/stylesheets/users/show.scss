@@ -40,3 +40,58 @@
 .prevButton {
   height: 50px;
 }
+
+#show-page-like-button {
+  color:black;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 34px;
+}
+
+#show-page-liked-button {
+color:rgb(195, 6, 195);
+text-decoration: none;
+font-size: 34px;
+transition: 0.5s;
+}
+
+#show-page-like-button:hover {
+  color: hsla(293, 94%, 37%, 0.5);
+  transition: 0.6s;
+}
+
+#show-page-liked-button:hover {
+  color: hsla(0, 0%, 50%, 0.5);
+  transition: 0.6s;
+}
+
+#chatroom-link-favourites-page {
+  color: hsla(210, 31%, 49%, 0.6);
+  font-size: 22px;
+  margin-right: 12px;
+}
+
+.liked-note-favs-page {
+  color:rgb(195, 6, 195);
+  text-decoration: none;
+  font-size:24px;
+  transition: 0.5s;
+}
+
+.liked-note-favs-page:hover {
+  color: hsla(293, 94%, 37%, 0.5);
+  transition: 0.6s;
+}
+
+.favourites-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  bottom: 4%;
+  right: 9%;
+}
+
+#icons-favs-page{
+  position: relative;
+}

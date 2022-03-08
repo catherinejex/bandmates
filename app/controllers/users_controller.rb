@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
 
     @users = User.all
@@ -13,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @favourite = current_user.given_likes
     @user = User.find(params[:id])
     @chatroom = Chatroom.find_by(creator: current_user, invited: @user) || Chatroom.find_by(creator: @user, invited: current_user)
   end
