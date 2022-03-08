@@ -1,64 +1,83 @@
 @import "new.scss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-// .poop {
-//   height: 100vh;
-//   width: 100vw;
-//   position: relative;
-// }
-.all-content {
-  // position: absolute;
-  // bottom: 0%;
-  // padding-top: 50px;
-  width: 100vw;
-  font-family: 'Poppins';
-  // overflow-y: scroll;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: rgb(212, 212, 212);
+
+.all-posts {
+  margin-top: 58px;
+  margin-bottom: 58px;
+
 }
+
 .post {
   margin: 0 auto;
-  margin-bottom: 10px;
+
   width: 100%;
-  height: 60vh;
-  // margin-bottom: 15px;
-  h2 {
+  height: 100%;
+  margin-bottom: 35px;
+  h3 {
     margin-bottom: 0;
-    // background-image: linear-gradient(to right, rgb(14, 7, 122), rgb(211, 28, 248), rgb(233, 94, 191));
-    // background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    font-family: 'Lobster', cursive;
+    font-family: 'Poppins';
+    font-weight: bolder;
   }
   image {
     height: 55%;
   }
 }
-.name {
-  height: 7%;
-  background-color: rgb(255, 255, 255);
-  padding-left: 5px;
-  padding-top: 2px;
-  padding-bottom: 1px;
+
+.avatar-feed {
+  width: 43px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 7px;
+  object-fit: cover;
+  background-position: center;
 }
-.post-bottom {
+
+.top-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 43%;
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom: 10px;
-  background-color: rgb(255, 255, 255);
+  color: black;
 }
-.post-info {
+.inner-post-bottom {
+  font-family: 'Poppins';
+  margin: 0 9px;
+  font-size: 14px;
+  .date {
+    font-size: 12px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.feed-icons {
   display: flex;
-  justify-content: space-between;
+  padding: 0px 2px 6px;
+  color:rgb(132, 0, 255)
+}
+
+.icon-feed {
+  margin-right: 9px;
+}
+
+.post-info {
+margin-left: 53px;
+font-family: 'Poppins';
+margin-bottom: 0;
+  h3 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .image {
   width: 100%;
-  height: 48%;
+  border-radius: 13px;
+  height: 50%;
+  padding: 6px;
   object-fit: cover;
 }
