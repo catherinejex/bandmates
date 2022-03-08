@@ -95,3 +95,13 @@ transition: 0.5s;
 #icons-favs-page{
   position: relative;
 }
+
+.carousel-inner {
+  height: 300px;
+}
+
+.carousel-inner img {
+  height: 300px;
+  background-position: center;
+  object-fit: cover;
+}
