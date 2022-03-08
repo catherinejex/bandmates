@@ -14,7 +14,6 @@
       <%= render "messages/message", message: message %>
     <% end %>
   </div>
-</div>
 
 <div class="sending-message">
   <%= simple_form_for [@chatroom, @message],
@@ -28,5 +27,6 @@
     %>
     <%= f.submit "Send", class: "btn btn-primary btn-message-send" %>
   <% end %>
+</div>
 </div>
 <%= render 'shared/footer' %>
