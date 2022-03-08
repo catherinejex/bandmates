@@ -2,25 +2,6 @@
 <div class='all-posts'>
   <% @posts.each do |post| %>
     <div class='post'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div class='name'>
-        <h2><%= post.user.username %></h2>
-      </div>
-      <% if post.photo.attached? %>
-        <img class='image' src='<%= cl_image_path post.photo.key%>'>
-      <% end %>
-      <% if post.video.attached? %>
-        <%= cl_video_tag post.video.key, controls: true, class:'image' %>
-      <% end %>
-      <div class='post-bottom'>
-      <p><%= post.description %></p>
-        <p><%= post.location %><p>
-        <div class='post-info'>
-          <p><%= time_ago_in_words(post.created_at)%> ago</p>
-=======
-=======
->>>>>>> d7ebacac6f1cd3bfcca1a75138634fea5284f8ae
       <div class='top-card'>
         <%= cl_image_tag post.user.photos.first.key, class: "avatar-feed", alt: "avatar" %>
         <div class='post-info'>
@@ -56,10 +37,6 @@
           </div>
           <p><%= post.description %></p>
           <p class="date"><%= time_ago_in_words(post.created_at)%> ago</p>
-<<<<<<< HEAD
->>>>>>> 2285a1863efdfde605c6293e2d82384e8dcdb976
-=======
->>>>>>> d7ebacac6f1cd3bfcca1a75138634fea5284f8ae
         </div>
     </div>
   <% end %>

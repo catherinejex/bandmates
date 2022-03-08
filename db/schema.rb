@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2022_03_08_100630) do
 
   # These are extensions that must be enabled in order to support this database
@@ -97,7 +96,7 @@ ActiveRecord::Schema.define(version: 2022_03_08_100630) do
     t.string "taggable_type"
     t.integer "taggable_id"
     t.string "tagger_type"
-    t.integer "tagger_id"<<<<<<< adding-more-seeds
+    t.integer "tagger_id"
     t.string "context", limit: 128
     t.datetime "created_at"
     t.index ["context"], name: "index_taggings_on_context"
