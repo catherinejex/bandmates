@@ -6,8 +6,12 @@ Post.delete_all
 Favourite.delete_all
 User.delete_all
 
+puts ("START SEEDING")
+puts (ENV['CLOUDINARY_URL'])
+
 user1 = User.create!(email: "kermit@hello.com", password: "123456", username: "Kermit Green", bio: "I'm a 20 year drumming veteran, I can play any style because I'm a G. I am looking for people to form a band with and sell out Wembley. Ive played with big names like Rammstein and 50 Cent", location: "Stoke Newington", instrument_list: ["Drums", "Vocals" , "Triangle"], genre_list: ["Rock", "Jazz", "Funk"], experience: "Professional" )
 user1.photos.attach(io: File.open('app/assets/images/drummer.jpg'), filename: 'drummer.jpg', content_type: 'image/jpg')
+puts ("helloooooooooooo")
 
 user2 = User.create!(email: "rick@hello.com", password: "123456", username: "Rick the Madman", bio: "I'm just learning the guitar guys. Can someone let me join their band, am trying to learn. Can also make a good cup of coffee.", location: "Los Angeles", instrument_list: ["Guitar"], genre_list: ["Punk"] )
 user2.photos.attach(io: File.open('app/assets/images/guitar.jpg'), filename: 'guitar.jpg', content_type: 'image/jpg')
@@ -18,7 +22,7 @@ user3.photos.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'vi
 user4 = User.create!(email: "james@hello.com", password: "123456", username: "James Rodriguez", bio: "I play the bongos. Im a bit of a big deal back in Cuba. Send me a DM and I will see if you are worthy to play with me", location: "Havana", instrument_list: ["Bongos", "Flute"], genre_list: ["Latin"], experience: "Novice" )
 user4.photos.attach(io: File.open('app/assets/images/james.jpg'), filename: 'james.jpg', content_type: 'image/jpg')
 
-user5 = User.create!(email: "21@hello.com", password: "123456", username: "21 Savage", bio: "Hey guys, Im a savage. Join my crew. Looking for someone to make beats or anybody who can write.", location: "Atlanta", instrument_list: ["Rapper"], genre_list: ["Drill"] )
+user5 = User.create!(email: "21@hello.com", password: "1234 56", username: "21 Savage", bio: "Hey guys, Im a savage. Join my crew. Looking for someone to make beats or anybody who can write.", location: "Atlanta", instrument_list: ["Rapper"], genre_list: ["Drill"] )
 user5.photos.attach(io: File.open('app/assets/images/21-Savage.jpg'), filename: '21-Savage.jpg', content_type: 'image/jpg')
 
 user6 = User.create!(email: "ben@hello.com", password: "123456", username: "Ben 'The Figma' McWagon", bio: "I'm a mean drummer and play the harmonica. If you are cool enough join my band ping me here. My band is 31 strong and meet every day on Kingsland road for 9 hours, all 31 memebers play the keyboards!", location: "Shoreditch", instrument_list: ["Drums", "Harmonica"], genre_list: ["Country", "2010 Hip-hop"] )
