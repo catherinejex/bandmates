@@ -14,6 +14,5 @@ class User < ApplicationRecord
   # acts_as_taggable_on :genres
   # serialize :instruments, Array
   # serialize :genres, Array
-
-
+  EXPERIENCE = ["beginner", "novice", "intermediate", "advanced", "professional"]
 end
