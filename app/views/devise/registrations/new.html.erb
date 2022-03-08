@@ -4,56 +4,44 @@
 
 <div class='sign-up-journey'>
   <div class='content'>
-    <div class='sign-up-module' id='first'>
-      <h2 class="sign-up-text">Sign up</h2>
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class='sign-up-module' id='first'>
+    <h2 class="sign-up-text">Sign up</h2>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
-        <div class="form-inputs-signup">
-          <%= f.input :email,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" }%>
-          <%= f.input :password,
-                      required: true,
-                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "hint",
-                      input_html: { autocomplete: "new-password" } %>
-          <%= f.input :password_confirmation,
-                      required: true,
-                      input_html: { autocomplete: "new-password" } %>
+            <div class="form-inputs-signup">
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "hint",
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+            </div>
+          <div class="form-actions-signup">
+            <a href="#second" class='next-button'>Next</a>
+          </div>
         </div>
-      <div class="form-actions-signup">
-        <a href="#second" class='next-button'>Next</a>
-      </div>
-    </div>
-    <div class='sign-up-module' id='second'>
-      <h1>Will this be a band profile </br>or an individual profile?</h1>
-      <a href='#third'>
-        <div class="card-category" style="background-image: linear-gradient(rgba(7,32,245,0.3), rgba(7,32,245,0.3)), url('https://images.unsplash.com/photo-1522536421511-14c9073df899?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')">
-          <h2>Individual</h2>
+        <div class='sign-up-module' id='second'>
+          <h3>What instruments do you</br> play?</h3>
+          <%= f.input :instrument_list, :as => :text, :input_html => { :rows => 5 }, label: false %>
+          <h3>What genres do you</br> play?</h3>
+          <%= f.input :genre_list, :as => :text, :input_html => { :rows => 5 }, label: false %>
+          <h3 style='margin-bottom: 20px'>What is your level of </br>experience?</h3>
+          <%= f.input :experience, as: :range, label: false, id:"experience-slider", :input_html => { min: 1, max: 5, :style => 'margin-bottom: 40px' } %>
+          <h5 id="experience-label"></h5>
+          <a href="#third" class='next-button'>Next</a>
         </div>
-      </a>
-      <a href='#fourth'>
-        <div class="card-category" style="background-image: linear-gradient(rgba(7,32,245,0.3), rgba(7,32,245,0.3)), url('https://images.unsplash.com/photo-1481886756534-97af88ccb438?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80')">
-          <h2>Band</h2>
+        <div class='sign-up-module' id='third'>
+          <h1>Add some photos!</h1>
+          <%= f.input :photos, as: :file, label: false, :input_html => { multiple: true, :style => 'margin-bottom: 100px;' } %>
+          <h1 style="margin-bottom: 30px;">And finally where are</br> you based?</h1>
+          <%= f.input :location, label: false %>
+          <%= f.submit "Share", class:'submit-button' %>
         </div>
-      </a>
-    </div>
-    <div class='sign-up-module' id='third'>
-      <h1>What instruments do you</br> play?</h1>
-      <%= f.input :instruments, label: false, :input_html => { :style => 'margin-bottom: 100px' } %>
-      <h1>What genres do you</br> play?</h1>
-      <%= f.input :genres, label: false, :input_html => { :style => 'margin-bottom: 50px'} %>
-      <a href="#fifth" class='next-button'>Next</a>
-    </div>
-    <div class='sign-up-module' id='fifth'>
-      <h1 style="margin-bottom: 30px;">And finally where are</br> you based?</h1>
-      <%= f.input :location, label: false, :input_html => { :style => 'margin-bottom: 30px' } %>
-      <div style="width: 90%; height: 350px; margin: 0 auto;"
-        data-controller="mapbox"
-        data-mapbox-markers-value="<%= @markers.to_json %>"
-        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-    </div>
       <% end %>
     </div>
   </div>
