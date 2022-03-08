@@ -28,7 +28,7 @@
   </div>
   <div class='cards'>
     <% @users.each do |user| %>
-      <div class="card-user">
+      <div class="card-user" id="user-<%= user.id%>">
         <a class='show-link' href="<%= user_path(user) %>">
           <%= cl_image_tag user.photos.first.key, class:'card-image' %>
         </a>
