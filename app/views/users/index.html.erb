@@ -18,6 +18,11 @@
       class: "filter-input",
       placeholder: "Instrument"
       %>
+      <%= text_field_tag :experience,
+      params[:experience],
+      class: "filter-input",
+      placeholder: "Exp."
+      %>
       <%= submit_tag "Search", class: "filter-submit-button" %>
     <% end %>
   </div>
@@ -30,9 +35,9 @@
         <div class="card-body">
           <div class="card-info">
             <p style="font-size:16px; font-family: Lobster, cursive; font-weight:bold"><%= user.username %></p>
-            <p> <i class="fa fa-map-pin" id="pin"></i> <%= user.location %></p>
-            <p> <span style="font-size: 18px;">♪</span> <i class="fas fa-guitar"></i> <%= user.instruments.join(', ') %></p>
-            <p> <span style="font-size:10px;">🏷️</span> <%= user.genres.join(', ') %></p>
+            <p> <span style="font-size: 18px;">♪</span> <i class="fas fa-guitar"></i> <%= user.instrument_list.join(', ') %></p>
+            <p> <i class="fa fa-tag" aria-hidden="true" style="color: #E6D100"></i>  <%= user.genre_list.join(', ') %></p>
+            <p style='font-size: 14px;'><i class="fa fa-map-marker" style='color: #9F1212' aria-hidden="true"></i>  <%= user.location %></p>
             <% if (favourite = @favourites.find_by(liked: user)).present? %>
               <%= link_to favourite_path(user),remote: true, method: :delete do%>
               <div class="liked-note"><i class="fa fa-music"></i></div>
