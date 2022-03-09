@@ -1,25 +1,11 @@
-<% if message.user == current_user %>
-   <div id="message-<%= message.id %>" style='text-align: right'>
-    <small class='right-name'>
-      <i><%= message.created_at.strftime("%l:%M %p") %></i>
-      <strong><%= message.user.username %></strong>
-    </small>
-    <br>
-    <div class="d-flex align-items-center justify-content-end mb-3">
-      <p class="message-content current-user" style="text-align: left"><%= message.content %></p>
-      <%= cl_image_tag message.user.photos.first.key, class:'img-avatar-message right' %>
-    </div>
+
+<div id="message-<%= message.id %>" class="<%= local_assigns[:css_class] %>" data-chatroom-subscription-target="message" data-sender-id="<%= message.user.id %>">
+  <small>
+    <strong><%= message.user.username %></strong>
+    <i><%= message.created_at.strftime("%l:%M %p") %></i>
+  </small>
+  <div class="d-flex align-items-center mb-3">
+    <%= cl_image_tag message.user.photos.first.key, class:'img-avatar-message' %>
+    <p class="message-content"><%= message.content %></p>
   </div>
-<% else %>
-  <div id="message-<%= message.id %>">
-    <small>
-      <strong><%= message.user.username %></strong>
-      <i><%= message.created_at.strftime("%l:%M %p") %></i>
-    </small>
-    <br>
-    <div class="d-flex align-items-center mb-3">
-      <%= cl_image_tag message.user.photos.first.key, class:'img-avatar-message' %>
-      <p class="message-content"><%= message.content %></p>
-    </div>
-  </div>
-<% end %>
+</div>
