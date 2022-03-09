@@ -11,7 +11,7 @@ User.delete_all
 puts "db clean"
 puts "create users"
 
-user1 = User.create!(email: "turnstile@hello.com", password: "123456", username: "Turnstile", bio: "We are an American hardcore punk band from Baltimore, Maryland formed in 2010. We have released five EPs and three studio albums", location: "Baltimore, Maryland USA", instrument_list: ["Hardcore Punk", "Alternative Rock"], genre_list: ["Rock", "Jazz", "Funk"], experience: "Professional" )
+user1 = User.create!(email: "turnstile@hello.com", password: "123456", username: "Turnstile", bio: "We are an American hardcore punk band from Baltimore, Maryland formed in 2010. We have released five EPs and three studio albums", location: "Baltimore, Maryland USA", instrument_list: ["vocals," "guitars", "bass", "drums"], genre_list: ["Hardcore Punk", "Alternative Rock"], experience: "Professional" )
 user1.photos.attach(io: File.open('app/assets/images/turnstile.jpeg'), filename: 'turnstile.jpeg', content_type: 'image/jpg')
 user1.photos.attach(io: File.open('app/assets/images/turnstile2.jpeg'), filename: 'turnstile2.jpeg', content_type: 'image/jpg')
 user1.photos.attach(io: File.open('app/assets/images/turnstile3.jpeg'), filename: 'turnstile3.jpeg', content_type: 'image/jpg')
@@ -84,6 +84,9 @@ user19 = User.create!(email: "dave@hello.com", password: '123456', username: 'Da
 user19.photos.attach(io: File.open('app/assets/images/dave1.jpeg'), filename: 'dave1.jpeg', content_type: 'image/jpeg')
 user19.photos.attach(io: File.open('app/assets/images/dave2.jpeg'), filename: 'dave2.jpeg', content_type: 'image/jpeg')
 user19.photos.attach(io: File.open('app/assets/images/dave3.jpeg'), filename: 'dave3.jpeg', content_type: 'image/jpeg')
+
+user20 = User.create!(email: "dean@hello.com", password: '123456', username: 'Dean', bio: "Hi I'm Dean; a classy guy from London. You can catch me at Le Wagon when I'm not making sick beats", location: "London, UK", instrument_list: ["DJ", "Vocals"], genre_list: ['Electronica'])
+user20.photos.attach(io: File.open('app/assets/images/dean.jpg'), filename: 'dean.jpg', content_type: 'image/jpg')
 
 puts "creating posts"
 
