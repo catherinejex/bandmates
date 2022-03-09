@@ -6,8 +6,8 @@ class UsersController < ApplicationController
 
     query = User.all.where('id != ?', current_user.id)
     query = query.where("location ILIKE ?", "%#{params[:location]}%") if params[:location].present?
-    query = query.where("genres ILIKE ?", "%#{params[:genres]}%") if params[:genres].present?
-    query = query.where("instruments ILIKE ?", "%#{params[:instruments]}%") if params[:instruments].present?
+    query = query.tagged_with(params[:genres], any: true) if params[:genres].present?
+    query = query.tagged_with(params[:instruments], any: true) if params[:instruments].present?
     @users = query
 
   end
