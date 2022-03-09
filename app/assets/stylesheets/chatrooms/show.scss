@@ -83,11 +83,7 @@
   overflow: scroll;
 }
 
-.right-name {
-  text-align: right;
-  width: 100%;
-  // margin-left: 210px;
-}
+
 
 #new_message {
   margin: 10px 40px 10px 0px;
@@ -96,4 +92,33 @@
 textarea {
   resize: none;
   outline: none;
+}
+
+.right-name {
+  text-align: right;
+  width: 100%;
+  // margin-left: 210px;
+}
+
+.sent-message > small {
+  display: flex;
+  justify-content: end;
+  flex-direction: row-reverse;
+}
+
+.sent-message > small > i {
+  padding-right: 5px;
+}
+
+.sent-message > div > img {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.sent-message > div {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 12px;
 }

@@ -9,9 +9,13 @@
 <div class="container chatroom"
   data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
-  <div class="messages" data-chatroom-subscription-target="messages">
+  <div class="messages" data-chatroom-subscription-target="messages" data-current-user-id="<%= current_user.id %>">
     <% @chatroom.messages.each do |message| %>
-      <%= render "messages/message", message: message %>
+      <% if message.user == current_user %>
+        <%= render "messages/message", message: message, css_class: "sent-message" %>
+      <% else %>
+        <%= render "messages/message", message: message, css_class: "received-message" %>
+      <% end %>
     <% end %>
   </div>
 
