@@ -86,7 +86,7 @@ user19.photos.attach(io: File.open('app/assets/images/dave2.jpeg'), filename: 'd
 user19.photos.attach(io: File.open('app/assets/images/dave3.jpeg'), filename: 'dave3.jpeg', content_type: 'image/jpeg')
 
 user20 = User.create!(email: "dean@hello.com", password: '123456', username: 'Dean', bio: "Hi I'm Dean; a classy guy from London. You can catch me at Le Wagon when I'm not making sick beats", location: "London, UK", instrument_list: ["DJ", "Vocals"], genre_list: ['Electronica'])
-user12.photos.attach(io: File.open('app/assets/images/dean.png'), filename: 'dean.png', content_type: 'image/png')
+user20.photos.attach(io: File.open('app/assets/images/dean.jpg'), filename: 'dean.jpg', content_type: 'image/jpg')
 
 puts "creating posts"
 
