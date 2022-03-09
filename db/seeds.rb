@@ -7,8 +7,10 @@ Post.delete_all
 Favourite.delete_all
 User.delete_all
 
+
 puts "db clean"
 puts "create users"
+
 user1 = User.create!(email: "turnstile@hello.com", password: "123456", username: "Turnstile", bio: "We are an American hardcore punk band from Baltimore, Maryland formed in 2010. We have released five EPs and three studio albums", location: "Baltimore, Maryland USA", instrument_list: ["Hardcore Punk", "Alternative Rock"], genre_list: ["Rock", "Jazz", "Funk"], experience: "Professional" )
 user1.photos.attach(io: File.open('app/assets/images/turnstile.jpeg'), filename: 'turnstile.jpeg', content_type: 'image/jpg')
 user1.photos.attach(io: File.open('app/assets/images/turnstile2.jpeg'), filename: 'turnstile2.jpeg', content_type: 'image/jpg')
@@ -77,12 +79,14 @@ user18.photos.attach(io: File.open('app/assets/images/cello-girl.jpeg'), filenam
 user18.photos.attach(io: File.open('app/assets/images/cello-girl2.jpeg'), filename: 'cello-girl2.jpeg', content_type: 'image/jpg')
 user18.photos.attach(io: File.open('app/assets/images/cello.jpeg'), filename: 'cello.jpeg', content_type: 'image/jpg')
 
+
 user19 = User.create!(email: "dave@hello.com", password: '123456', username: 'Dave', bio: "I'm Dave, grime MC, rapper, songwriter, DJ and record producer from Bow, London. I'm working on my new album at the moment. Get in touch if you wanna learn more. ", location: "Bow, London UK", instrument_list: ["Vocals"], genre_list: ["Rap", "Hip-Hop"], experience: "Professional")
 user19.photos.attach(io: File.open('app/assets/images/dave1.jpeg'), filename: 'dave1.jpeg', content_type: 'image/jpeg')
 user19.photos.attach(io: File.open('app/assets/images/dave2.jpeg'), filename: 'dave2.jpeg', content_type: 'image/jpeg')
 user19.photos.attach(io: File.open('app/assets/images/dave3.jpeg'), filename: 'dave3.jpeg', content_type: 'image/jpeg')
 
 puts "creating posts"
+
 # Posts
 
 post1 = Post.create!(description: "I've been listening to some really good throwbacks lately 🖤", location: 'Kingston Upon Thames, Greater London', youtube_link: "https://www.youtube.com/embed/6A1xu0BSs2s", user: user14)
@@ -100,6 +104,7 @@ post5 = Post.create!(description: "New music alert! Check out 'Catherine's Space
 
 post6 = Post.create!(description: "Our new album 'Glow On' is out now on Spotify, iTunes, or wherever you get your music.", location: 'Baltimore, Maryland, USA', user: user1)
 post6.photo.attach(io: File.open('app/assets/images/turnstile_album.jpg'), filename: 'turnstile_album.jpeg', content_type: 'image/jpeg')
+
 
 post7 = Post.create!(description: "Anyone remember this amazing performance?? Amazing!!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/6ayyfucIl6M", user: user16)
 
