@@ -5,11 +5,11 @@
 .login-text {
  text-align: center;
  font-family: 'Lobster', cursive;
- color: rgb(255, 35, 244);
+ color: white;
  font-size: 70px;
  padding-bottom: 30px;
  padding-top: 210px;
- text-shadow: 2px 1px 1px white;
+ text-shadow: 2px 2px 1px black;
 }
 
 .login {
@@ -38,17 +38,19 @@
 
 .form-actions {
   text-align: center;
-  border: 1px solid rgb(255, 35, 244);
-  background-color: rgb(255, 35, 244);
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color: black;
   width: 60%;
   border-radius: 50px;
   margin-left: 76px
 }
 
 input.btn {
-  color: white;
+  color: #4e1ec1;
+  letter-spacing: 2px;
 }
 
 .forgot, .sign-up {
-  color:rgb(0, 204, 255);
+  color: white;
 }
