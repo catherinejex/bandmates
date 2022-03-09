@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
 .all-posts {
-  margin-top: 58px;
+  margin-top: 24px;
   margin-bottom: 58px;
 }
 
@@ -17,6 +17,10 @@
     font-family: 'Poppins';
     font-weight: bolder;
   }
+}
+
+.post-info {
+  padding-left: 3px;
 }
 
 .avatar-feed {
@@ -91,4 +95,45 @@ margin-bottom: 0;
   padding: 6px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+
+// .my-class {
+//   cursor: pointer;
+//   display: inline-block;
+//   font-size: 1.15rem;
+//   border-radius: 50rem;
+//   padding: 0.1rem 0.5rem;
+//   background-color: #7E73FF;
+//   color: white;
+//   border: 1px solid #7E73FF;
+//   margin-right: 0.6rem;
+//   margin-bottom: 0.4rem;
+// }
+
+.nav-link.active {
+  color: #fff !important;
+  background-color: #542FDA !important;
+}
+
+.nav-link {
+  border-radius: 50rem !important;
+  font-size: 1rem;
+  border: 1px solid #542FDA !important;
+  padding: 0.2rem 0.5rem;
+
+}
+
+.nav-link:hover {
+  transition: 0.5s !important;
+  background-color: hslA(245, 55%, 76%, 0.5);
+}
+
+#pills-tab {
+  margin-top: 65px;
+  margin-left: 13px;
+}
+
+#pills-posts-tab {
+  margin-left: 5px;
 }

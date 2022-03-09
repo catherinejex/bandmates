@@ -2,20 +2,30 @@
   background-size: cover;
   background-position: center;
   object-fit: cover;
-  // height: 350px;
+  height: 350px;
   width: 100%;
+  margin-bottom: 20px;
 }
 .form {
   width: 100vw;
+  font-family: 'Poppins';
+}
+.was-validated .form-control:valid, .form-control.is-valid {
+  border: none;
+  background-image: url('https://cdn-icons-png.flaticon.com/128/1250/1250615.png');
+}
+.form-control:valid {
+  border-style: none;
 }
 .form-inputs {
-  width: 100%;
-  border: none;
+  width: 90%;
   input {
+    border-style: none !important;
     background-color: white;
-    border: none;
   }
 }
-.form-input:focus {
+
+.update-button {
+  background-color: #542FDA;
   border: none;
 }

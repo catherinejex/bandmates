@@ -18,41 +18,36 @@
       class: "filter-input",
       placeholder: "Instrument"
       %>
-      <%= text_field_tag :experience,
-      params[:experience],
-      class: "filter-input",
-      placeholder: "Exp."
-      %>
       <%= submit_tag "Search", class: "filter-submit-button" %>
     <% end %>
   </div>
-  <div class='cards'>
-    <% @users.each do |user| %>
-      <div class="card-user">
-        <a class='show-link' href="<%= user_path(user) %>">
-          <%= cl_image_tag user.photos.first.key, class:'card-image' %>
-        </a>
-        <div class="card-body">
-          <div class="card-info">
-            <p style="font-size:16px; font-family: Lobster, cursive; font-weight:bold"><%= user.username %></p>
-            <p> <span style="font-size: 18px;">♪</span> <i class="fas fa-guitar"></i> <%= user.instrument_list.join(', ') %></p>
-            <p> <i class="fa fa-tag" aria-hidden="true" style="color: #E6D100"></i>  <%= user.genre_list.join(', ') %></p>
-            <p style='font-size: 14px;'><i class="fa fa-map-marker" style='color: #9F1212' aria-hidden="true"></i>  <%= user.location %></p>
-            <% if (favourite = @favourites.find_by(liked: user)).present? %>
-              <%= link_to favourite_path(user),remote: true, method: :delete do%>
-              <div class="liked-note"><i class="fa fa-music"></i></div>
-              <%end %>
-            <% else %>
-              <%= link_to user_favourites_path(user),remote: true, method: :post do %>
-                <div class="music-note">
-                  <i class="fa fa-music"></i>
-                </div>
-              <% end %>
+</div>
+<div class='cards'>
+  <% @users.each do |user| %>
+    <div class="card-user" id="user-<%= user.id%>">
+      <a class='show-link' href="<%= user_path(user) %>">
+        <%= cl_image_tag user.photos.first.key, class:'card-image' %>
+      </a>
+      <div class="card-body">
+        <div class="card-info">
+          <p style="font-size:16px; font-family: Lobster, cursive; font-weight:bold"><%= user.username %></p>
+          <p> <span style="font-size: 18px;">♪</span> <i class="fas fa-guitar"></i> <%= user.instrument_list.join(', ') %></p>
+          <p> <i class="fa fa-tag" aria-hidden="true" style="color: #E6D100"></i>  <%= user.genre_list.join(', ') %></p>
+          <p style='font-size: 14px;'><i class="fa fa-map-marker" style='color: #9F1212' aria-hidden="true"></i>  <%= user.location %></p>
+          <% if (favourite = @favourites.find_by(liked: user)).present? %>
+            <%= link_to favourite_path(user),remote: true, method: :delete do%>
+            <div class="liked-note"><i class="fa fa-music"></i></div>
+            <%end %>
+          <% else %>
+            <%= link_to user_favourites_path(user),remote: true, method: :post do %>
+              <div class="music-note">
+                <i class="fa fa-music"></i>
+              </div>
             <% end %>
-          </div>
+          <% end %>
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 <%= render 'shared/footer' %>

@@ -1,10 +1,15 @@
 require 'open-uri'
+puts "cleaning db"
 
 Message.delete_all
 Chatroom.delete_all
 Post.delete_all
 Favourite.delete_all
 User.delete_all
+
+
+puts "db clean"
+puts "create users"
 
 user1 = User.create!(email: "turnstile@hello.com", password: "123456", username: "Turnstile", bio: "We are an American hardcore punk band from Baltimore, Maryland formed in 2010. We have released five EPs and three studio albums", location: "Baltimore, Maryland USA", instrument_list: ["Hardcore Punk", "Alternative Rock"], genre_list: ["Rock", "Jazz", "Funk"], experience: "Professional" )
 user1.photos.attach(io: File.open('app/assets/images/turnstile.jpeg'), filename: 'turnstile.jpeg', content_type: 'image/jpg')
@@ -57,6 +62,8 @@ user14.photos.attach(io: File.open('app/assets/images/cat.JPG'), filename: 'cat.
 
 user15 = User.create!(email: "jlh@hello.com", password: '123456', username: 'Just Like Heaven', bio: "Just Like Heaven- an alternative rock group based in Birmingham, AL. Check us out on Spotify, Bandcamp, Facebook, and Instagram", location: "Birmingham, Alabama USA", instrument_list: ["Vocals", "Lead guitar", "Rhythm guitar","Bass", "Drums"], genre_list: ["Alternative Rock"], experience: "Professional")
 user15.photos.attach(io: File.open('app/assets/images/jlh.jpg'), filename: 'jlh.jpg', content_type: 'image/jpg')
+user15.photos.attach(io: File.open('app/assets/images/jlh2.jpg'), filename: 'jlh2.jpg', content_type: 'image/jpg')
+user15.photos.attach(io: File.open('app/assets/images/jlh3.jpg'), filename: 'jlh3.jpg', content_type: 'image/jpg')
 
 user16 = User.create!(email: "seb@hello.com", password: '123456', username: 'Seb Lowe', bio: "Hi, my name is Seb, I'm a singer and songwriter. I play acoustic guitar. I wrote a 7 track mini-album called 'Half-decent', which should be dropping soon on Spotify and other platforms. I'm also looking for a producer, if anyone is interested please send me a message!", location: "Manchester, UK", instrument_list: ["Vocals", "Accoustic guitar"], genre_list: ["Alternative", "Indie"], experience: "Professional")
 user16.photos.attach(io: File.open('app/assets/images/seb-lowe-2-2.jpg'), filename: 'seb-lowe-2-2.jpg', content_type: 'image/jpg')
@@ -72,10 +79,13 @@ user18.photos.attach(io: File.open('app/assets/images/cello-girl.jpeg'), filenam
 user18.photos.attach(io: File.open('app/assets/images/cello-girl2.jpeg'), filename: 'cello-girl2.jpeg', content_type: 'image/jpg')
 user18.photos.attach(io: File.open('app/assets/images/cello.jpeg'), filename: 'cello.jpeg', content_type: 'image/jpg')
 
-user19 = User.create!(email: "wiley@hello.com", password: '123456', username: 'Wiley', bio: "I'm Wiley, grime MC, rapper, songwriter, DJ and record producer from Bow, London. I'm working on my new album at the moment. Get in touch if you wanna learn more. ", location: "Bow, London UK", instrument_list: ["Vocals"], genre_list: ["Rap", "Hip-Hop"], experience: "Professional")
-user19.photos.attach(io: File.open('app/assets/images/wiley.jpg'), filename: 'wiley.jpg', content_type: 'image/jpg')
-user19.photos.attach(io: File.open('app/assets/images/wiley2.png'), filename: 'wiley2.png', content_type: 'image/jpg')
-user19.photos.attach(io: File.open('app/assets/images/wiley3.jpg'), filename: 'wiley3.jpg', content_type: 'image/jpg')
+
+user19 = User.create!(email: "dave@hello.com", password: '123456', username: 'Dave', bio: "I'm Dave, grime MC, rapper, songwriter, DJ and record producer from Bow, London. I'm working on my new album at the moment. Get in touch if you wanna learn more. ", location: "Bow, London UK", instrument_list: ["Vocals"], genre_list: ["Rap", "Hip-Hop"], experience: "Professional")
+user19.photos.attach(io: File.open('app/assets/images/dave1.jpeg'), filename: 'dave1.jpeg', content_type: 'image/jpeg')
+user19.photos.attach(io: File.open('app/assets/images/dave2.jpeg'), filename: 'dave2.jpeg', content_type: 'image/jpeg')
+user19.photos.attach(io: File.open('app/assets/images/dave3.jpeg'), filename: 'dave3.jpeg', content_type: 'image/jpeg')
+
+puts "creating posts"
 
 # Posts
 
@@ -95,10 +105,13 @@ post5 = Post.create!(description: "New music alert! Check out 'Catherine's Space
 post6 = Post.create!(description: "Our new album 'Glow On' is out now on Spotify, iTunes, or wherever you get your music.", location: 'Baltimore, Maryland, USA', user: user1)
 post6.photo.attach(io: File.open('app/assets/images/turnstile_album.jpg'), filename: 'turnstile_album.jpeg', content_type: 'image/jpeg')
 
-post7 = Post.create!(description: "Checkout my new single 'iPhone' on Youtube!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/-It7KNlYIXU", user: user16)
+
+post7 = Post.create!(description: "Anyone remember this amazing performance?? Amazing!!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/6ayyfucIl6M", user: user16)
 
 post8 = Post.create!(description: "If anyone is interested I have two tickets for this Saturday London Symphony Orchestra concert.", location: 'London, UK', user: user18)
 post8.photo.attach(io: File.open('app/assets/images/orchestra1.jpeg'), filename: 'orchestra1.jpeg', content_type: 'image/jpeg')
 
+post9 = Post.create!(description: "I had SO much fun at this concert my friend invited me to last night in London! Will definitely be looking for future dates!! 🎤", location: 'London, UK', user: user12)
+post9.photo.attach(io: File.open('app/assets/images/post9.jpg'), filename: 'post9.jpg', content_type: 'image/jpg')
 
 puts "finished"
