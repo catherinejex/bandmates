@@ -23,9 +23,10 @@
 }
 
 .form-inputs {
-  color: rgb(255, 35, 244);
+  color: rgb(252, 252, 252);
   width: 90%;
   margin: auto;
+  font-family: "Poppins";
   input {
     border-radius: 50px;
   }
@@ -49,5 +50,5 @@ input.btn {
 }
 
 .forgot, .sign-up {
-  color:rgb(255, 35, 244);
+  color:rgb(0, 204, 255);
 }
