@@ -79,11 +79,9 @@
 }
 
 .messages {
-  height: 675px;
+  height: calc(100vh - 220px);
   overflow: scroll;
 }
-
-
 
 #new_message {
   margin: 10px 40px 10px 0px;

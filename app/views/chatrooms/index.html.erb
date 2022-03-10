@@ -4,22 +4,28 @@
   <div class="all-messages">
     <h2 class='mb-3' style="font-family: Lobster, cursive">Chats</h2>
     <% @chatrooms.each do |chatroom| %>
-    <%# <strong><%= chatroom.messages.last.user.username %>
-    <%# <i><%= chatroom.messages.last.created_at.strftime("%l:%M %p") %>
-    <%# <br> %>
-    <%= link_to chatroom_path(chatroom), class:'link-black' do %>
-    <div class="user-last-content d-flex">
-      <% if chatroom.creator != current_user %>
-        <%= cl_image_tag chatroom.creator.photos.first.key, class:'img-avatar-message' %>
-      <% else %>
-        <%= cl_image_tag chatroom.invited.photos.first.key, class:'img-avatar-message' %>
+      <small>
+        <% if current_user == chatroom.invited %>
+          <strong><%= chatroom.creator.username%></strong>
+        <% else %>
+          <strong><%= chatroom.invited.username%></strong>
+        <% end %>
+        <i><%= chatroom.messages.last.created_at.strftime("%l:%M %p") %></i>
+        <br>
+      </small>
+      <%= link_to chatroom_path(chatroom), class:'link-black' do %>
+      <div class="user-last-content d-flex">
+        <% if chatroom.creator != current_user %>
+          <%= cl_image_tag chatroom.creator.photos.first.key, class:'img-avatar-message' %>
+        <% else %>
+          <%= cl_image_tag chatroom.invited.photos.first.key, class:'img-avatar-message' %>
+        <% end %>
+        <div class="message-content flex-grow-1">
+          <%= chatroom.messages.last.content %>
+        </div>
+        <br>
+        </div>
       <% end %>
-      <div class="message-content flex-grow-1">
-        <%= chatroom.messages.last.content %>
-      </div>
-      <br>
-      </div>
-    <% end %>
     <% end %>
   </div>
 </div>

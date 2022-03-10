@@ -7,7 +7,6 @@ Post.delete_all
 Favourite.delete_all
 User.delete_all
 
-
 puts "db clean"
 puts "create users"
 
@@ -16,8 +15,10 @@ user1.photos.attach(io: File.open('app/assets/images/turnstile.jpeg'), filename:
 user1.photos.attach(io: File.open('app/assets/images/turnstile2.jpeg'), filename: 'turnstile2.jpeg', content_type: 'image/jpg')
 user1.photos.attach(io: File.open('app/assets/images/turnstile3.jpeg'), filename: 'turnstile3.jpeg', content_type: 'image/jpg')
 
+
 user2 = User.create!(email: "rick@hello.com", password: "123456", username: "Ricky", bio: "I'm a beginner guitarist hoping to make some new friends on BandMates. I'm hoping to improve my skills enough to join a band sometime.", location: "Los Angeles, CA USA", instrument_list: ["Guitar"], genre_list: ["Blues"], experience: "Beginner" )
 user2.photos.attach(io: File.open('app/assets/images/guitarpost.jpg'), filename: 'guitarpost.jpg', content_type: 'image/jpg')
+
 
 user3 = User.create!(email: "zoe@hello.com", password: "123456", username: "Zoe Monet", bio: "I play the violin. I have sold out shows. Classically trained. Serious enquiries only. I also teach violin at the musical school I used to go when I was little.", location: "Paris, France", instrument_list: ["Violin"], genre_list: ["Classical"], experience: "Advanced" )
 user3.photos.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'violin.jpg', content_type: 'image/jpg')
@@ -34,14 +35,15 @@ user5.photos.attach(io: File.open('app/assets/images/black-pumas3.jpeg'), filena
 user6 = User.create!(email: "ben@hello.com", password: "123456", username: "Ben", bio: "I'm a mean drummer and play the harmonica. If you are cool enough join my band ping me here. My band is 31 strong and meet every day on Kingsland road for 9 hours, all 31 memebers play the keyboards!", location: "Shoreditch, Greater London UK", instrument_list: ["Drums", "Harmonica"], genre_list: ["Country", "2010 Hip-hop"], experience: "Intermediate" )
 user6.photos.attach(io: File.open('app/assets/images/ben.png'), filename: 'ben.png', content_type: 'image/png')
 
-user7 = User.create!(email: "terry@hello.com", password: '123456', username: "Terry", bio: "Hi there, I'm Terry, and I'm learning how to play the drums! I've been playing for a few months now, but I would love any tips, tricks, or advice to improve. I live in NYC and love all types of music! I would also love to take my career to the next level and join a professional band.", location: "New York, New York USA", instrument_list: ["Drums"], genre_list: ["Rock"], experience: "Novice")
-user7.photos.attach(io: File.open('app/assets/images/terry.jpg'), filename: 'terry.jpg', content_type: 'image/jpeg')
+user7 = User.create!(email: "alex@hello.com", password: '123456', username: "Alexandre Morey", bio: "Bonjour, j'ai recemment commence a jouer du Ukulele. Je suis maintenant un expert, je peux jouer tous les morceaux de musique que vous voulez. Mais pour ca, il faut que je sois a la plage!", location: "London", instrument_list: ["Ukulele"], genre_list: ["Beach Vibes"], experience: "Advanced")
+user7.photos.attach(io: File.open('app/assets/images/alex.jpg'), filename: 'alex.jpg', content_type: 'image/jpeg')
 
 user8 = User.create!(email: "raeesa@hello.com", password: "123456", username: "Raeesa Qureshi", bio: "I play the organ casually on the weekends when I'm not coding or performing triple heart bypasses. I make fusion Brit-pop and soul, kinda snazzy", location: "Kent, UK", instrument_list: ["Church Organ"], genre_list: ["Brit-pop", "Soul"], experience: "Intermediate" )
 user8.photos.attach(io: File.open('app/assets/images/Raeesa.jfif'), filename: 'Raeesa.jfif', content_type: 'image/jfif')
 
 user9 = User.create!(email: "ford@hello.com", password: '123456', username: 'Ford Burgess', bio: "Hey guys, I'm Ford and I've been playing the guitar since I was 14; I really love blues music (Eric Clapton, Stevie Ray Vaughan) but I also like to play 90s music, mostly grunge/britpop. I'm looking to be a form or join a band that plays either genre.", location: "London, UK", instrument_list: ["Guitar"], genre_list: ['Blues', 'Grunge', 'Alternative'], experience: "Advanced")
 user9.photos.attach(io: File.open('app/assets/images/ford-playing-guitar.JPG'), filename: 'ford-playing-guitar.JPG', content_type: 'image/JPG')
+user9.photos.attach(io: File.open('app/assets/images/fordpose.png'), filename: 'fordpose.png', content_type: 'image/JPG')
 
 user10 = User.create!(email: "門脇@hello.com", password: '123456', username: '門脇 義雄', bio: "私はチーズケーキが大好きです。とても美味しいです。暑い日に素敵なチーズケーキとドクターペッパーに勝るものはありません", location: "Pleasant Valley, Mississipi USA", instrument_list: ['Steel Drums'], genre_list: ['Rap, Classical'], experience: "Professional")
 user10.photos.attach(io: File.open('app/assets/images/steeldrum1.jpeg'), filename: 'steeldrum1.jpeg', content_type: 'image/jpeg')
@@ -54,7 +56,7 @@ user11.photos.attach(io: File.open('app/assets/images/liam2.jpeg'), filename: 'l
 user12 = User.create!(email: "jack@hello.com", password: '123456', username: 'Jukebox Jack', bio: "I'm an average geezer from London (not American). Ive been playing the spoons for over 8 years, classically trained and all. They call me Jukebox Jack because I know 500 songs off by heart, my friends tell me I have a good voice too.", location: "Stanmore, Greater London UK", instrument_list: ["Spoons", "Vocals"], genre_list: ['The Algerian kind'])
 user12.photos.attach(io: File.open('app/assets/images/jack.jpg'), filename: 'jack.jpg', content_type: 'image/jpg')
 
-user13 = User.create!(email: "oli@hello.com", password: '123456', username: 'Synth Wizard', bio: "Hi everyone, Im a wizard on the synth, get at me to make some bangers. I make beats and write bars. Buy my mixtape too and check out my soundcloud.", location: "Leeds, UK", instrument_list: ["Synth", "Rapper"], genre_list: ['Celestial', "Hip-Hop", "Jungle"], experience: "Intermediate")
+user13 = User.create!(email: "oli@hello.com", password: '123456', username: 'Oli Finn', bio: "Hi everyone, Im a wizard on the synth, get at me to make some bangers. I make beats and write bars. Buy my mixtape too and check out my soundcloud.", location: "Leeds, UK", instrument_list: ["Synth", "Rapper"], genre_list: ['Celestial', "Hip-Hop", "Jungle"], experience: "Intermediate")
 user13.photos.attach(io: File.open('app/assets/images/oli.jfif'), filename: 'oli.jfif', content_type: 'image/jfif')
 
 user14 = User.create!(email: "cat@hello.com", password: '123456', username: 'Catherine', bio: "Hi there, I'm Catherine. I just moved back to the UK and looking to meet people with similar music taste as I. I've been playing bass (4 string) for about 3 years now.", location: "Kingston Upon Thames, Greater London UK", instrument_list: ["Bass"], genre_list: ['Death metal', "shoegaze", "Alternative"], experience: "Advanced")
@@ -80,17 +82,24 @@ user18.photos.attach(io: File.open('app/assets/images/cello-girl2.jpeg'), filena
 user18.photos.attach(io: File.open('app/assets/images/cello.jpeg'), filename: 'cello.jpeg', content_type: 'image/jpg')
 
 
-user19 = User.create!(email: "dave@hello.com", password: '123456', username: 'Dave', bio: "I'm Dave, grime MC, rapper, songwriter, DJ and record producer from Bow, London. I'm working on my new album at the moment. Get in touch if you wanna learn more. ", location: "Bow, London UK", instrument_list: ["Vocals"], genre_list: ["Rap", "Hip-Hop"], experience: "Professional")
+user19 = User.create!(email: "dave@hello.com", password: '123456', username: 'Dave', bio: "I'm Dave, rapper, songwriter, DJ and record producer from South London. I'm working on my new album at the moment. Get in touch if you wanna learn more. ", location: "London UK", instrument_list: ["Vocals"], genre_list: ["Rap", "Hip-Hop"], experience: "Professional")
 user19.photos.attach(io: File.open('app/assets/images/dave1.jpeg'), filename: 'dave1.jpeg', content_type: 'image/jpeg')
 user19.photos.attach(io: File.open('app/assets/images/dave2.jpeg'), filename: 'dave2.jpeg', content_type: 'image/jpeg')
 user19.photos.attach(io: File.open('app/assets/images/dave3.jpeg'), filename: 'dave3.jpeg', content_type: 'image/jpeg')
 
-user20 = User.create!(email: "dean@hello.com", password: '123456', username: 'Dean', bio: "Hi I'm Dean; a classy guy from London. You can catch me at Le Wagon when I'm not making sick beats", location: "London, UK", instrument_list: ["DJ", "Vocals"], genre_list: ['Electronica'])
+user20 = User.create!(email: "dean@hello.com", password: '123456', username: 'Dean Tresadern', bio: "Hi I'm Dean; a classy guy from London, Jack of all trades, master of some! You can catch me at Le Wagon when I'm not making sick beats", location: "London, UK", instrument_list: ["Theremin", "Vocals", "Vocoder"], genre_list: ['Electronica', "Sci-Fi"])
 user20.photos.attach(io: File.open('app/assets/images/dean.jpg'), filename: 'dean.jpg', content_type: 'image/jpg')
+
+user21 = User.create!(email: "alan@hello.com", password: "123456", username: "Alan Rodriguez", bio: "I play the bapipes, a few years of experience. If you're looking for lessons, or need me to annoy your neighbour message me.", location: "London & Madrid", instrument_list: ["Bagpipes"], genre_list: ["Galician"], experience: "Intermedio")
+user21.photos.attach(io: File.open('app/assets/images/alan.jpg'), filename: 'alan.jpg', content_type: 'image/jpg')
+
+user22 = User.create!(email: "terry@hello.com", password: '123456', username: "Terry", bio: "Hi there, I'm Terry, and I'm learning how to play the drums! I've been playing for a few months now, but I would love any tips, tricks, or advice to improve. I live in NYC and love all types of music! I would also love to take my career to the next level and join a professional band.", location: "New York, New York USA", instrument_list: ["Drums"], genre_list: ["Rock"], experience: "Novice")
+user22.photos.attach(io: File.open('app/assets/images/terry.jpg'), filename: 'terry.jpg', content_type: 'image/jpeg')
 
 puts "creating posts"
 
-# Posts
+
+#post seeds
 
 post1 = Post.create!(description: "I've been listening to some really good throwbacks lately 🖤", location: 'Kingston Upon Thames, Greater London', youtube_link: "https://www.youtube.com/embed/6A1xu0BSs2s", user: user14)
 
@@ -107,7 +116,6 @@ post5 = Post.create!(description: "New music alert! Check out 'Catherine's Space
 
 post6 = Post.create!(description: "Our new album 'Glow On' is out now on Spotify, iTunes, or wherever you get your music.", location: 'Baltimore, Maryland, USA', user: user1)
 post6.photo.attach(io: File.open('app/assets/images/turnstile_album.jpg'), filename: 'turnstile_album.jpeg', content_type: 'image/jpeg')
-
 
 post7 = Post.create!(description: "Anyone remember this amazing performance?? Amazing!!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/6ayyfucIl6M", user: user16)
 

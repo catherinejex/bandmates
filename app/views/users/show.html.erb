@@ -44,7 +44,7 @@
     <p id="body-text"><strong>Genres: </strong><%= @user.genre_list.join(', ') %></p>
     <p id="body-text"><strong>Experience: </strong><%= @user.experience %></p>
     <p id="body-text" style="font-size: 14px"><%= @user.bio %></p>
-    <br>
+    <%# <br> %>
     <div class="d-flex justify-content-center">
       <% if @chatroom.present? %>
         <%= link_to 'Send a message', chatroom_path(@chatroom), class:'btn btn-primary btn-sendmessage'  %>
