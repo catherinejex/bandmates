@@ -112,38 +112,49 @@ puts "creating posts"
 
 #post seeds
 
-post1 = Post.create!(description: "I've been listening to some really good throwbacks lately 🖤", location: 'Kingston Upon Thames, Greater London', youtube_link: "https://www.youtube.com/embed/6A1xu0BSs2s", user: user14)
+post1 = Post.create!(description: "I've been listening to some really good throwbacks lately 🖤", location: 'Kingston Upon Thames, Greater London', youtube_link: "https://www.youtube.com/embed/6A1xu0BSs2s", user: user14, created_at: "2022-03-10 15:40:00")
 
-post2 = Post.create!(description: "Are you looking for a producer? I can fully mix and master your music, £30/hour. Inquire for details", location: 'Houston, Texas', user: user13)
+post2 = Post.create!(description: "Are you looking for a producer? I can fully mix and master your music, £30/hour. Inquire for details", location: 'Houston, Texas', user: user13, created_at: "2022-03-10 15:49:00")
 post2.photo.attach(io: File.open('app/assets/images/studio.jpg'), filename: 'studio.jpg', content_type: 'image/jpg')
 
-post3 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user3)
+
+post3 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user3, created_at: "2022-03-10 15:35:00")
 post3.photo.attach(io: File.open('app/assets/images/Violin-Teacher.jpg'), filename: 'Violin-Teacher.jpg', content_type: 'image/jpg')
 
-post4 = Post.create!(description: "Come see us play tonight at Slim Jim's! We will be opening for The Radio Dept. and we go on at 9pm!", location: "Angel, London", user: user7)
+post4 = Post.create!(description: "Come see us play tonight at Slim Jim's! We will be opening for The Radio Dept. and we go on at 9pm!", location: "Angel, London", user: user7, created_at: "2022-03-10 15:30:00")
 post4.photo.attach(io: File.open('app/assets/images/post4.jpg'), filename: 'post4.jpg', content_type: 'image/jpg')
 
-post5 = Post.create!(description: "New music alert! Check out 'Catherine's Space Station' on Spotify and Bandcamp!", location: "Alabama, USA", spotify_link: "https://open.spotify.com/embed/track/7tK4NqOuGcdykYx5FemHyS?utm_source=generator", user: user15)
 
-post6 = Post.create!(description: "Our new album 'Glow On' is out now on Spotify, iTunes, or wherever you get your music.", location: 'Baltimore, Maryland, USA', user: user1)
+post5 = Post.create!(description: "New music alert! Check out 'Catherine's Space Station' on Spotify and Bandcamp!", location: "Alabama, USA", spotify_link: "https://open.spotify.com/embed/track/7tK4NqOuGcdykYx5FemHyS?utm_source=generator", user: user15, created_at: "2022-03-10 15:10:00")
+
+post6 = Post.create!(description: "Our new album 'Glow On' is out now on Spotify, iTunes, or wherever you get your music.", location: 'Baltimore, Maryland, USA', user: user1, created_at: "2022-03-10 15:20:00")
 post6.photo.attach(io: File.open('app/assets/images/turnstile_album.jpg'), filename: 'turnstile_album.jpeg', content_type: 'image/jpeg')
 
-post7 = Post.create!(description: "Anyone remember this amazing performance?? Amazing!!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/6ayyfucIl6M", user: user16)
+post7 = Post.create!(description: "Anyone remember this amazing performance?? Amazing!!", location: "Manchester, UK", youtube_link: "https://www.youtube.com/embed/6ayyfucIl6M", user: user16, created_at: "2022-03-10 15:25:00")
 
-post8 = Post.create!(description: "If anyone is interested I have two tickets for this Saturday London Symphony Orchestra concert.", location: 'London, UK', user: user18)
+post8 = Post.create!(description: "If anyone is interested I have two tickets for this Saturday London Symphony Orchestra concert.", location: 'London, UK', user: user1, created_at: "2022-03-10 15:15:00")
 post8.photo.attach(io: File.open('app/assets/images/orchestra1.jpeg'), filename: 'orchestra1.jpeg', content_type: 'image/jpeg')
 
-post9 = Post.create!(description: "I had SO much fun at this concert my friend invited me to last night in London! Will definitely be looking for future dates!! 🎤", location: 'London, UK', user: user12)
+post16 = Post.create!(description: "I'm a lead guitarist looking for a band, preferably alternative or blues music, hml if interested.", location: "Angel, London", user: user9)
+post16.video.attach(io: File.open('app/assets/images/fordplaying.mp4'), filename: 'fordplaying.mp4', content_type: 'image/mp4')
+
+post9 = Post.create!(description: "I had SO much fun at this concert my friend invited me to last night in London! Will definitely be looking for future dates!! 🎤", location: 'London, UK', user: user12, created_at: "2022-03-10 15:05:00")
 post9.photo.attach(io: File.open('app/assets/images/post9.jpg'), filename: 'post9.jpg', content_type: 'image/jpg')
 
-post10 = Post.create!(description: "Happy to announce that I'm now offering guitar lessons for £25/hour. I specialize in teaching beginners and novices and teaching the foundations of theory. Message me if interested!", location: "Clapham, London", user: user2)
+
+post10 = Post.create!(description: "Happy to announce that I'm now offering guitar lessons for £25/hour. I specialize in teaching beginners and novices and teaching the foundations of theory. Message me if interested!", location: "Clapham, London", user: user2, created_at: "2022-03-10 15:00:00")
 post10.photo.attach(io: File.open('app/assets/images/Guitar-Instructor.jpeg'), filename: 'Guitar-Instructor.jpeg', content_type: 'image/jpeg')
 
-post11 = Post.create!(description: "Thank you Birmingham, we had a wonderful time, catch us in Manchester next week!", location: 'Birmingham, UK', user: user10)
+post11 = Post.create!(description: "Thank you Birmingham, we had a wonderful time, catch us in Manchester next week!", location: 'Birmingham, UK', user: user10, created_at: "2022-03-10 14:50:00")
 post11.photo.attach(io: File.open('app/assets/images/manholdingguiter.jpeg'), filename: 'manholdingguiter.jpeg', content_type: 'image/jpeg')
 
-post12 = Post.create!(description: "Yo, criterion was lit last night, come see us at BOK center tmo", location: 'Oklahoma City, OK', user: user21 )
+post12 = Post.create!(description: "Yo, criterion was lit last night, come see us at BOK center tmo", location: 'Oklahoma City, OK', user: user21, created_at: "2022-03-10 14:40:00")
 post12.photo.attach(io: File.open('app/assets/images/rap-concer.jpeg'), filename: 'rap-concer.jpeg', content_type: 'image/jpeg')
 
+post13 = Post.create!(description: "Basement never gets old. Hope they tour soon!", location: 'Kent', spotify_link: "https://open.spotify.com/embed/track/7n7LXkir2vxKrl7SSW4htc?utm_source=generator", user: user8, created_at: "2022-03-10 14:45:00")
+
+post14 = Post.create!(description: "It's a Daft Punk kind of day 😎", location: 'London', spotify_link: "https://open.spotify.com/embed/track/2cGxRwrMyEAp8dEbuZaVv6?utm_source=generator", user: user20, created_at: "2022-03-10 14:30:00")
+
+post15 = Post.create!(description: "I can't believe this came out in 2006! I feel old. 😲", location: 'NYC', youtube_link: "https://www.youtube.com/embed/z-mxBDuRaZ8", user: user7, created_at: "2022-03-10 14:55:00")
 
 puts "finished"

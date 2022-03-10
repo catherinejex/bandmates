@@ -4,23 +4,27 @@
 
 <div class='sign-up-journey'>
   <div class='content'>
-  <div class='sign-up-module' id='first'>
-    <h2 class="sign-up-text">Sign up</h2>
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class='sign-up-module' id='first'>
+      <h2 class="sign-up-text">Sign up</h2>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
-            <div class="form-inputs-signup">
-              <%= f.input :email,
-                          required: true,
-                          autofocus: true,
-                          input_html: { autocomplete: "email" }%>
-              <%= f.input :password,
-                          required: true,
-                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "hint",
-                          input_html: { autocomplete: "new-password" } %>
-              <%= f.input :password_confirmation,
-                          required: true,
-                          input_html: { autocomplete: "new-password" } %>
-            </div>
+          <div class="form-inputs-signup">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+            <%= f.input :username,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "name" }%>
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), class: "hint",
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password", style: "margin-bottom: 75px" } %>
+          </div>
           <div class="form-actions-signup">
             <a href="#second" class='next-button'>Next</a>
           </div>
@@ -31,18 +35,23 @@
           <h3>What genres do you</br> play?</h3>
           <%= f.input :genre_list, :as => :text, :input_html => { :rows => 5 }, label: false %>
           <h3 style='margin-bottom: 20px'>What is your level of </br>experience?</h3>
-          <%= f.input :experience, as: :range, label: false, id:"experience-slider", :input_html => { min: 1, max: 5, :style => 'margin-bottom: 40px' } %>
-          <h5 id="experience-label"></h5>
+          <%= f.input :experience, as: :range, label: false, id:"experience-slider", :input_html => { min: 1, max: 5, :style => 'margin-bottom: 10px' } %>
+          <h5 id="experience-label">intermediate</h5>
           <a href="#third" class='next-button'>Next</a>
         </div>
         <div class='sign-up-module' id='third'>
-          <h1>Add some photos!</h1>
+          <h1 style='margin-bottom: 20px'>Add some photos!</h1>
           <%= f.input :photos, as: :file, label: false, :input_html => { multiple: true, :style => 'margin-bottom: 100px;' } %>
-          <h1 style="margin-bottom: 30px;">And finally where are</br> you based?</h1>
-          <%= f.input :location, label: false %>
-          <%= f.submit "Share", class:'submit-button' %>
+          <h1 style="margin-bottom: 30px;">And finally, where are</br> you based?</h1>
+          <%= f.input :location, label: false, :input_html => { class: 'location-input'} %>
+          <%= f.button :submit, "Sign Up!", class:'submitty-witty' %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
+
+
+<script>
+
+</script>
