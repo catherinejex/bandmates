@@ -10,6 +10,7 @@
 .form.edit {
   width: 100vw;
   font-family: 'Poppins';
+  margin-bottom: 70px;
 }
 .was-validated .form-control:valid, .form-control.is-valid {
   border: none;
@@ -29,6 +30,11 @@
 .update-button {
   background-color: #542FDA;
   border: none;
+  // margin: 0;
+}
+
+.form-actions.update-button {
+  margin: auto;
 }
 
 .update-button {
@@ -40,6 +46,6 @@
 .logout {
   text-align: center;
   color: #542FDA;
-  padding-right: 6px;
+  // padding-right: 6px;
   font-size: 14px;
 }
