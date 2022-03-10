@@ -117,13 +117,11 @@ post1 = Post.create!(description: "I've been listening to some really good throw
 post2 = Post.create!(description: "Are you looking for a producer? I can fully mix and master your music, £30/hour. Inquire for details", location: 'Houston, Texas', user: user13, created_at: "2022-03-10 15:49:00")
 post2.photo.attach(io: File.open('app/assets/images/studio.jpg'), filename: 'studio.jpg', content_type: 'image/jpg')
 
-
 post3 = Post.create!(description: "I'm now offering violin lessons for $20 an hour!", location: 'Kensington, London', user: user3, created_at: "2022-03-10 15:35:00")
 post3.photo.attach(io: File.open('app/assets/images/Violin-Teacher.jpg'), filename: 'Violin-Teacher.jpg', content_type: 'image/jpg')
 
 post4 = Post.create!(description: "Come see us play tonight at Slim Jim's! We will be opening for The Radio Dept. and we go on at 9pm!", location: "Angel, London", user: user7, created_at: "2022-03-10 15:30:00")
 post4.photo.attach(io: File.open('app/assets/images/post4.jpg'), filename: 'post4.jpg', content_type: 'image/jpg')
-
 
 post5 = Post.create!(description: "New music alert! Check out 'Catherine's Space Station' on Spotify and Bandcamp!", location: "Alabama, USA", spotify_link: "https://open.spotify.com/embed/track/7tK4NqOuGcdykYx5FemHyS?utm_source=generator", user: user15, created_at: "2022-03-10 15:10:00")
 
@@ -135,12 +133,8 @@ post7 = Post.create!(description: "Anyone remember this amazing performance?? Am
 post8 = Post.create!(description: "If anyone is interested I have two tickets for this Saturday London Symphony Orchestra concert.", location: 'London, UK', user: user1, created_at: "2022-03-10 15:15:00")
 post8.photo.attach(io: File.open('app/assets/images/orchestra1.jpeg'), filename: 'orchestra1.jpeg', content_type: 'image/jpeg')
 
-post16 = Post.create!(description: "I'm a lead guitarist looking for a band, preferably alternative or blues music, hml if interested.", location: "Angel, London", user: user9, created_at: "2022-03-10 15:06:00")
-post16.video.attach(io: File.open('app/assets/images/fordplaying.mp4'), filename: 'fordplaying.mp4', content_type: 'image/mp4')
-
 post9 = Post.create!(description: "I had SO much fun at this concert my friend invited me to last night in London! Will definitely be looking for future dates!! 🎤", location: 'London, UK', user: user12, created_at: "2022-03-10 15:05:00")
 post9.photo.attach(io: File.open('app/assets/images/post9.jpg'), filename: 'post9.jpg', content_type: 'image/jpg')
-
 
 post10 = Post.create!(description: "Happy to announce that I'm now offering guitar lessons for £25/hour. I specialize in teaching beginners and novices and teaching the foundations of theory. Message me if interested!", location: "Clapham, London", user: user2, created_at: "2022-03-10 15:00:00")
 post10.photo.attach(io: File.open('app/assets/images/Guitar-Instructor.jpeg'), filename: 'Guitar-Instructor.jpeg', content_type: 'image/jpeg')
