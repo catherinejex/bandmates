@@ -43,7 +43,9 @@
     <p id="body-text"><strong >Instruments: </strong><%= @user.instrument_list.join(', ') %></p>
     <p id="body-text"><strong>Genres: </strong><%= @user.genre_list.join(', ') %></p>
     <p id="body-text"><strong>Experience: </strong><%= @user.experience %></p>
-    <p id="body-text" style="font-size: 14px"><%= @user.bio %></p>
+    <div class="bio">
+      <p id="body-text" style="font-size: 14px"><%= @user.bio %></p>
+    </div>
     <%# <br> %>
     <div class="d-flex justify-content-center">
       <% if @chatroom.present? %>

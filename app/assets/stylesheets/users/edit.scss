@@ -1,12 +1,13 @@
-.banner-show img{
+.edit img{
   background-size: cover;
   background-position: center;
   object-fit: cover;
-  height: 350px;
+  height: 320px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
-.form {
+.form.edit {
   width: 100vw;
   font-family: 'Poppins';
 }
@@ -28,6 +29,12 @@
 .update-button {
   background-color: #542FDA;
   border: none;
+}
+
+.update-button {
+  .btn {
+    color: white;
+  }
 }
 
 .logout {
