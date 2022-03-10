@@ -41,6 +41,7 @@ user8.photos.attach(io: File.open('app/assets/images/Raeesa.jfif'), filename: 'R
 
 user9 = User.create!(email: "ford@hello.com", password: '123456', username: 'Ford Burgess', bio: "Hey guys, I'm Ford and I've been playing the guitar since I was 14; I really love blues music (Eric Clapton, Stevie Ray Vaughan) but I also like to play 90s music, mostly grunge/britpop. I'm looking to be a form or join a band that plays either genre.", location: "London, UK", instrument_list: ["Guitar"], genre_list: ['Blues', 'Grunge', 'Alternative'], experience: "Advanced")
 user9.photos.attach(io: File.open('app/assets/images/ford-playing-guitar.JPG'), filename: 'ford-playing-guitar.JPG', content_type: 'image/JPG')
+user9.photos.attach(io: File.open('app/assets/images/fordpose.png'), filename: 'fordpose.png', content_type: 'image/JPG')
 
 user10 = User.create!(email: "門脇@hello.com", password: '123456', username: '門脇 義雄', bio: "私はチーズケーキが大好きです。とても美味しいです。暑い日に素敵なチーズケーキとドクターペッパーに勝るものはありません", location: "Pleasant Valley, Mississipi USA", instrument_list: ['Steel Drums'], genre_list: ['Rap, Classical'], experience: "Professional")
 user10.photos.attach(io: File.open('app/assets/images/steeldrum1.jpeg'), filename: 'steeldrum1.jpeg', content_type: 'image/jpeg')
