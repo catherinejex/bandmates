@@ -1,5 +1,5 @@
 <%= render 'shared/navbar' %>
-  <div class="banner-show">
+  <div class="edit">
     <% if @user.photos.attached?  %>
       <%= cl_image_tag @user.photos.first.key %>
     <% else %>
@@ -11,7 +11,7 @@
       <% end %>
     </div>
   </div>
-  <div class='form'>
+  <div class='form edit'>
     <%= simple_form_for @user,  method: :patch do |f| %>
       <div class="form-inputs">
         <div class='input-and-label'>
@@ -27,7 +27,7 @@
           <%= f.input :genre_list, label: false %>
         </div>
         <div class='input-and-label'>
-          <%= f.input :bio, class:'bio', label: false, :input_html => { style:"margin-bottom: 40px; height: 100px;" } %>
+          <%= f.input :bio, class:'bio', label: false, :input_html => { style:"margin-bottom: 20px; height: 100px;" } %>
         </div>
       </div>
       <div class="form-actions update-button">
