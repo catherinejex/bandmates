@@ -14,7 +14,7 @@
 
     <div class='all-posts'>
       <% @posts.each do |post| %>
-        <div class='post'>
+        <div class='post' id="user-<%= post.user.id%>">
           <div class='top-card'>
             <%= link_to user_path(post.user) do %>
             <%= cl_image_tag post.user.photos.first.key, class: "avatar-feed", alt: "avatar" %>
@@ -23,6 +23,18 @@
             <% end %>
               <p><%= post.location %><p>
             </div>
+            <% if (favourite = @favourite.find_by(liked: post.user)).present? && post.user != current_user%>
+              <%= link_to favourite_path(post.user),remote: true, method: :delete do%>
+               <div id="show-page-liked-button"><i class="fa fa-music note-posts-card"></i></div>
+              <%end %>
+            <% elsif @user != current_user %>
+              <%= link_to user_favourites_path(post.user),remote: true, method: :post do %>
+                <div id="show-page-like-button">
+                  <i class="fa fa-music note-posts-card"></i>
+                </div>
+              <% end %>
+            <% end %>
+
           </div>
 
             <% if post.photo.attached? %>
@@ -72,6 +84,25 @@
             <% end %>
               <p><%= post.location %><p>
             </div>
+
+              <% if (favourite = @favourite.find_by(liked: post.user)).present? && post.user != current_user%>
+                <%= link_to favourite_path(post.user),remote: true, method: :delete do%>
+                  <div id="show-page-liked-button"><i class="fa fa-music note-posts-card"></i></div>
+                <%end %>
+              <% elsif @user != current_user %>
+                <%= link_to user_favourites_path(post.user),remote: true, method: :post do %>
+                  <div id="show-page-like-button">
+                    <i class="fa fa-music note-posts-card"></i>
+                  </div>
+                <% end %>
+              <% end %>
+
+
+
+
+
+
+
           </div>
 
             <% if post.photo.attached? %>

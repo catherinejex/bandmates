@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @favourites = Favourite.where(liker: current_user)
     faved_ids = @favourites.map { |e| e.liked_id }
     @faves = Post.where(user: faved_ids)
-
+    @favourite = current_user.given_likes
   end
 
   def new

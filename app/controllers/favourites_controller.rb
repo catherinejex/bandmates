@@ -8,6 +8,8 @@ class FavouritesController < ApplicationController
     @favourite.save
     if URI(request.referer).path == '/users'
       redirect_to users_path(anchor: "user-#{params[:user_id]}")
+    elsif URI(request.referer).path == '/posts'
+      redirect_to posts_path(anchor: "user-#{params[:user_id]}")
     else
       redirect_to request.referrer
     end
@@ -18,6 +20,8 @@ class FavouritesController < ApplicationController
     @favourite.destroy
     if URI(request.referer).path == '/users'
       redirect_to users_path(anchor: "user-#{params[:id]}")
+    elsif URI(request.referer).path == '/posts'
+      redirect_to posts_path(anchor: "user-#{params[:id]}")
     else
       redirect_to request.referrer
     end
