@@ -135,7 +135,7 @@ post7 = Post.create!(description: "Anyone remember this amazing performance?? Am
 post8 = Post.create!(description: "If anyone is interested I have two tickets for this Saturday London Symphony Orchestra concert.", location: 'London, UK', user: user1, created_at: "2022-03-10 15:15:00")
 post8.photo.attach(io: File.open('app/assets/images/orchestra1.jpeg'), filename: 'orchestra1.jpeg', content_type: 'image/jpeg')
 
-post16 = Post.create!(description: "I'm a lead guitarist looking for a band, preferably alternative or blues music, hml if interested.", location: "Angel, London", user: user9)
+post16 = Post.create!(description: "I'm a lead guitarist looking for a band, preferably alternative or blues music, hml if interested.", location: "Angel, London", user: user9, created_at: "2022-03-10 15:06:00")
 post16.video.attach(io: File.open('app/assets/images/fordplaying.mp4'), filename: 'fordplaying.mp4', content_type: 'image/mp4')
 
 post9 = Post.create!(description: "I had SO much fun at this concert my friend invited me to last night in London! Will definitely be looking for future dates!! 🎤", location: 'London, UK', user: user12, created_at: "2022-03-10 15:05:00")
