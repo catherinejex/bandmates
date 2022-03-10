@@ -1,7 +1,7 @@
 
 <div id="message-<%= message.id %>" class="<%= local_assigns[:css_class] %>" data-chatroom-subscription-target="message" data-sender-id="<%= message.user.id %>">
   <small>
-    <strong><%= message.user.username %></strong>
+    <%# <strong><%= message.user.username %>
     <i><%= message.created_at.strftime("%l:%M %p") %></i>
   </small>
   <div class="d-flex align-items-center mb-3">
