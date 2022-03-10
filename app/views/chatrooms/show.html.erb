@@ -4,6 +4,16 @@
   <%= link_to :back do %>
     <i class="fa fa-arrow-left"></i>
   <% end %>
+  <small>
+    <% if current_user == @chatroom.invited %>
+      <%= cl_image_tag @chatroom.creator.photos.first.key, class:'img-avatar-message small' %>
+      <strong><%= @chatroom.creator.username%></strong>
+    <% else %>
+      <%= cl_image_tag @chatroom.invited.photos.first.key, class:'img-avatar-message small' %>
+      <strong><%= @chatroom.invited.username%></strong>
+    <% end %>
+    <br>
+  </small>
 </div>
 
 <div class="container chatroom"
