@@ -16,8 +16,8 @@ user1.photos.attach(io: File.open('app/assets/images/turnstile.jpeg'), filename:
 user1.photos.attach(io: File.open('app/assets/images/turnstile2.jpeg'), filename: 'turnstile2.jpeg', content_type: 'image/jpg')
 user1.photos.attach(io: File.open('app/assets/images/turnstile3.jpeg'), filename: 'turnstile3.jpeg', content_type: 'image/jpg')
 
-user2 = User.create!(email: "rick@hello.com", password: "123456", username: "Rick the Madman", bio: "I'm just learning the guitar guys. Can someone let me join their band, am trying to learn. Can also make a good cup of coffee.", location: "Los Angeles, CA USA", instrument_list: ["Guitar"], genre_list: ["Punk"], experience: "Beginner" )
-user2.photos.attach(io: File.open('app/assets/images/guitar.jpg'), filename: 'guitar.jpg', content_type: 'image/jpg')
+user2 = User.create!(email: "rick@hello.com", password: "123456", username: "Ricky", bio: "I'm a beginner guitarist hoping to make some new friends on BandMates. I'm hoping to improve my skills enough to join a band sometime.", location: "Los Angeles, CA USA", instrument_list: ["Guitar"], genre_list: ["Blues"], experience: "Beginner" )
+user2.photos.attach(io: File.open('app/assets/images/guitarpost.jpg'), filename: 'guitarpost.jpg', content_type: 'image/jpg')
 
 user3 = User.create!(email: "zoe@hello.com", password: "123456", username: "Zoe Monet", bio: "I play the violin. I have sold out shows. Classically trained. Serious enquiries only. I also teach violin at the musical school I used to go when I was little.", location: "Paris, France", instrument_list: ["Violin"], genre_list: ["Classical"], experience: "Advanced" )
 user3.photos.attach(io: File.open('app/assets/images/violin.jpg'), filename: 'violin.jpg', content_type: 'image/jpg')
@@ -31,7 +31,7 @@ user5.photos.attach(io: File.open('app/assets/images/black-pumas.jpg'), filename
 user5.photos.attach(io: File.open('app/assets/images/black-pumas2.jpg'), filename: 'black-pumas2.jpg', content_type: 'image/jpg')
 user5.photos.attach(io: File.open('app/assets/images/black-pumas3.jpeg'), filename: 'black-pumas3.jpeg', content_type: 'image/jpg')
 
-user6 = User.create!(email: "ben@hello.com", password: "123456", username: "Ben 'The Figma' McWagon", bio: "I'm a mean drummer and play the harmonica. If you are cool enough join my band ping me here. My band is 31 strong and meet every day on Kingsland road for 9 hours, all 31 memebers play the keyboards!", location: "Shoreditch, Greater London UK", instrument_list: ["Drums", "Harmonica"], genre_list: ["Country", "2010 Hip-hop"], experience: "Intermediate" )
+user6 = User.create!(email: "ben@hello.com", password: "123456", username: "Ben", bio: "I'm a mean drummer and play the harmonica. If you are cool enough join my band ping me here. My band is 31 strong and meet every day on Kingsland road for 9 hours, all 31 memebers play the keyboards!", location: "Shoreditch, Greater London UK", instrument_list: ["Drums", "Harmonica"], genre_list: ["Country", "2010 Hip-hop"], experience: "Intermediate" )
 user6.photos.attach(io: File.open('app/assets/images/ben.png'), filename: 'ben.png', content_type: 'image/png')
 
 user7 = User.create!(email: "terry@hello.com", password: '123456', username: "Terry", bio: "Hi there, I'm Terry, and I'm learning how to play the drums! I've been playing for a few months now, but I would love any tips, tricks, or advice to improve. I live in NYC and love all types of music! I would also love to take my career to the next level and join a professional band.", location: "New York, New York USA", instrument_list: ["Drums"], genre_list: ["Rock"], experience: "Novice")
