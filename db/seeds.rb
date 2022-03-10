@@ -97,8 +97,8 @@ user20.photos.attach(io: File.open('app/assets/images/dean.jpg'), filename: 'dea
 
 
 user21 = User.create!(email: "akeem@hello.com", password: '123456', username: 'Akeem Ali', bio: "Hey y'all, it's Akeem aka Keemy Casanova, I'm here to bring back that R&B and soul and fuse that with modern rap, hit me up if you're trying to collab.", location: 'Jackson, Mississippi', instrument_list: ["drums, vocals"], genre_list: ['rap', 'soul', 'R&B'], experience: 'Professional')
-user21.photos.attach(io: File.open('app/assets/images/akeemali.jpeg'), filename: 'akeemali.jpeg', content_type: 'image/jpeg')
-user21.photos.attach(io: File.open('app/assets/images/akeemali2.png'), filename: 'akeemali2.png', content_type: 'image/png')
+user21.photos.attach(io: File.open('app/assets/images/akeem-ali.jpeg'), filename: 'akeem-ali.jpeg', content_type: 'image/jpeg')
+user21.photos.attach(io: File.open('app/assets/images/akeem-ali2.png'), filename: 'akeem-ali2.png', content_type: 'image/png')
 
 user22 = User.create!(email: "alan@hello.com", password: "123456", username: "Alan Rodriguez", bio: "I play the bapipes, a few years of experience. If you're looking for lessons, or need me to annoy your neighbour message me.", location: "London & Madrid", instrument_list: ["Bagpipes"], genre_list: ["Galician"], experience: "Intermedio")
 user22.photos.attach(io: File.open('app/assets/images/alan.jpg'), filename: 'alan.jpg', content_type: 'image/jpg')
