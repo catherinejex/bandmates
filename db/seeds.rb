@@ -142,7 +142,7 @@ post10.photo.attach(io: File.open('app/assets/images/Guitar-Instructor.jpeg'), f
 post11 = Post.create!(description: "Thank you Birmingham, we had a wonderful time, catch us in Manchester next week!", location: 'Birmingham, UK', user: user10)
 post11.photo.attach(io: File.open('app/assets/images/manholdingguiter.jpeg'), filename: 'manholdingguiter.jpeg', content_type: 'image/jpeg')
 
-post12 = Post.create!(description: "Yo, criterion was lit last night, come see us at BOK center tmo", location: 'Oklahoma City, OK', user: )
+post12 = Post.create!(description: "Yo, criterion was lit last night, come see us at BOK center tmo", location: 'Oklahoma City, OK', user: user21 )
 post12.photo.attach(io: File.open('app/assets/images/rap-concer.jpeg'), filename: 'rap-concer.jpeg', content_type: 'image/jpeg')
 
 
