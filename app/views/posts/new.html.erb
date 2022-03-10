@@ -1,7 +1,7 @@
 <%= render 'shared/navbar' %>
 <div class="bp">
   <div class="container" style="margin-top: 50px">
-    <h1 class='text-center pt-3' style="font-family: 'Lobster', sans-serif; color:white">Create post</h1>
+    <h1 class='text-center pt-4' style="font-family: 'Lobster', sans-serif; color:white">Create post</h1>
     <div class='form-container'>
       <%= simple_form_for @post do |f| %>
         <%= f.input :photo, as: :file, class:"photo-input" %>
