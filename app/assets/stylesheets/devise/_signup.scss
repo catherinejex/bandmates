@@ -7,11 +7,15 @@ abbr[title*="required"] {
 }
 
 .sign-up-journey {
-  height: 200vh;
+  height: 100vh;
   width: 300vw;
-  background: linear-gradient(to right, rgb(102, 0, 197), rgb(2, 29, 187));
+  background: linear-gradient(to right, rgb(121, 4, 175), rgb(2, 29, 187));
   display: flex;
   justify-content: left;
+  font-family: 'Poppins';
+  h1, h3, h5 {
+    font-family: "Poppins";
+  }
 }
 .content {
   display: flex;
@@ -25,7 +29,7 @@ abbr[title*="required"] {
   width: 100vw;
 }
 #first {
-  padding-top: 200px;
+  padding-top: 100px;
 }
 #second {
   padding-top: 50px;
@@ -37,13 +41,14 @@ abbr[title*="required"] {
     width: 90%;
     margin-bottom: 50px;
   }
-  position: relative;
+  // position: relative;
 }
 #experience-label {
-  margin: 0 auto;
-  position: absolute;
-  bottom: 24%;
-  left: 8%;
+  // position: absolute;
+  // bottom: 24%;
+  // left: 8%;
+  margin-bottom: 40px;
+  margin-top: 0px;
 }
 
 #third {
@@ -67,9 +72,10 @@ abbr[title*="required"] {
 .sign-up-text {
   text-align: center;
   font-size: 70px;
-  color: white;
+  margin-bottom: 50px;
+  color: rgb(248, 72, 239);
   font-family: 'Lobster', cursive;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
 .form-inputs-signup {
   width: 90%;
@@ -84,14 +90,18 @@ abbr[title*="required"] {
   justify-content: center;
   margin-top: 30px;
 }
+.location-input {
+  margin-bottom: 70px;
+}
 .next-button {
   padding: 10px;
   width: 90%;
   text-align: center;
-  background-color: white;
+  margin: 0 auto;
+  background-color: rgb(248, 72, 239);
   border-radius: 50px;
   text-decoration: none;
-  color: black;
+  color: rgb(252, 249, 249);
 }
 
 // . {
@@ -115,4 +125,12 @@ abbr[title*="required"] {
 
 .form-text {
   color: white !important;
+}
+.submitty-witty {
+  background-color: rgb(248, 72, 239);
+  color: white;
+  border: none;
+  margin: 0 auto;
+  width: 90%;
+  padding: 10px;
 }
