@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
 
-    @posts = Post.all.reverse
+    @posts = Post.all.order(created_at: :desc)
     @favourites = Favourite.where(liker: current_user)
     faved_ids = @favourites.map { |e| e.liked_id }
     @faves = Post.where(user: faved_ids)
